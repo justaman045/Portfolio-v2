@@ -55,18 +55,25 @@ export function ContactForm() {
         body: JSON.stringify(values),
       });
 
-      form.reset();
-
-      if (response.status === 200) {
-        storeModal.onOpen({
-          title: "Thankyou!",
-          description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
-          icon: Icons.successAnimated,
-        });
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
       }
+
+      form.reset();
+      storeModal.onOpen({
+        title: "Thankyou!",
+        description:
+          "Your message has been received! I appreciate your contact and will get back to you shortly.",
+        icon: Icons.successAnimated,
+      });
     } catch (err) {
       console.log("Err!", err);
+      storeModal.onOpen({
+        title: "Something went wrong",
+        description:
+          "Your message could not be sent. Please try again in a moment.",
+        icon: Icons.warning,
+      });
     }
   }
 
@@ -134,7 +141,12 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={form.formState.isSubmitting}>
+          {form.formState.isSubmitting && (
+            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+          )}
+          {form.formState.isSubmitting ? "Sending..." : "Submit"}
+        </Button>
       </form>
     </Form>
   );

@@ -662,7 +662,6 @@
   max-width: 100%;
   height: auto;
   border-radius: var(--radius);
-  border: 1px solid hsl(var(--border));
-  margin: 1.5rem auto;
+  margin: 1.5rem 0;
   display: block;
 }

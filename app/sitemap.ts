@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
-import { getAllBlogsMeta } from "@/lib/blogs";
+import { getLocalBlogsMeta } from "@/lib/blogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -58,8 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Blog post pages — each gets its own sitemap entry with correct date
-  const blogs = getAllBlogsMeta();
+  // Blog post pages — local posts only (external posts live on their platform)
+  const blogs = getLocalBlogsMeta();
   const blogRoutes: MetadataRoute.Sitemap = blogs.map((blog) => ({
     url: `${baseUrl}/blogs/${blog.slug}`,
     lastModified: new Date(blog.date),

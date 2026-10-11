@@ -16,10 +16,15 @@ export default function BlogCard({ blog }: BlogCardProps) {
   });
 
   const isoDate = new Date(blog.date).toISOString();
+  const isExternal = blog.source !== "local" && Boolean(blog.externalUrl);
+  const href = isExternal ? blog.externalUrl! : `/blogs/${blog.slug}`;
 
   return (
     <Link
-      href={`/blogs/${blog.slug}`}
+      href={href}
+      {...(isExternal
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
       className="group relative flex flex-col bg-background border border-border rounded-lg overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:border-primary/40 hover:-translate-y-0.5"
     >
       <article className="flex flex-col h-full">
@@ -85,7 +90,11 @@ export default function BlogCard({ blog }: BlogCardProps) {
               aria-hidden="true"
             >
               Read
-              <Icons.chevronRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+              {isExternal ? (
+                <Icons.externalLink className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+              ) : (
+                <Icons.chevronRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+              )}
             </span>
           </div>
         </div>

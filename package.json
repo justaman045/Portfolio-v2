@@ -1,12 +1,14 @@
 {
-  "name": "minimal-portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -25,6 +27,7 @@
     "autoprefixer": "^10.4.27",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fast-xml-parser": "^5.11.2",
     "framer-motion": "^12.5.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.468.0",
@@ -58,6 +61,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "prettier": "^3.4.2",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.71.1"
   }
 }

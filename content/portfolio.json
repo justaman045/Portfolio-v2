@@ -1,0 +1,1133 @@
+{
+  "site": {
+    "name": "Aman Ojha - AI Enabled Sr. Software Development Engineer in Test",
+    "authorName": "Aman Ojha",
+    "username": "justaman045",
+    "role": "AI Enabled Sr. Software Development Engineer in Test",
+    "tagline": "AI Enabled Sr. Software Development Engineer in Test with {yearsOfExperience}+ years of experience building reliable, scalable, and AI-driven test systems.",
+    "description": "Aman Ojha - AI Enabled Sr. Software Development Engineer in Test working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
+    "url": "https://justaman045.vercel.app",
+    "links": {
+      "twitter": "https://x.com/justaman045",
+      "github": "https://github.com/justaman045",
+      "templateRepo": "https://github.com/justaman045/Portfolio-v2"
+    },
+    "ogImage": "https://avatars.githubusercontent.com/u/54279831?v=4",
+    "iconIco": "https://avatars.githubusercontent.com/u/54279831?v=4",
+    "logoIcon": "https://avatars.githubusercontent.com/u/54279831?v=4",
+    "keywords": [
+      "Aman Ojha",
+      "AI Enabled Sr. Software Development Engineer in Test",
+      "Senior SDET",
+      "Software Development Engineer in Test",
+      "Test Automation Engineer",
+      "QA Automation Engineer",
+      "Quality Engineering",
+      "AI Engineer",
+      "Machine Learning",
+      "Test Automation Frameworks",
+      "Playwright",
+      "Selenium",
+      "Cypress",
+      "API Testing",
+      "Performance Testing",
+      "Continuous Integration",
+      "Python Developer",
+      "TypeScript",
+      "React Developer",
+      "Next.js Developer",
+      "Full Stack Developer",
+      "Backend Developer",
+      "Databricks",
+      "Data Engineering",
+      "AI Startups",
+      "Tech Portfolio"
+    ],
+    "careerStartDate": "2021-10-25"
+  },
+  "socials": [
+    {
+      "name": "Github",
+      "username": "@justaman045",
+      "icon": "gitHub",
+      "link": "https://github.com/justaman045"
+    },
+    {
+      "name": "LinkedIn",
+      "username": "Aman Ojha",
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/in/justaman045"
+    },
+    {
+      "name": "Twitter",
+      "username": "@justaman045",
+      "icon": "twitter",
+      "link": "https://twitter.com/justaman045"
+    },
+    {
+      "name": "Gmail",
+      "username": "work.amanojha30",
+      "icon": "gmail",
+      "link": "mailto:work.amanojha30@gmail.com"
+    }
+  ],
+  "navigation": {
+    "mainNav": [
+      {
+        "title": "Projects",
+        "href": "/projects"
+      },
+      {
+        "title": "Experience",
+        "href": "/experience"
+      },
+      {
+        "title": "Contributions",
+        "href": "/contributions"
+      },
+      {
+        "title": "Skills",
+        "href": "/skills"
+      },
+      {
+        "title": "Blogs",
+        "href": "/blogs"
+      },
+{
+      "title": "Community",
+      "href": "/community",
+      "enabled": false
+    },
+      {
+        "title": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "description": "AI-enabled Senior SDET specializing in scalable test automation, API validation, and quality engineering for enterprise systems.",
+      "metadata": {
+        "title": "Home",
+        "description": "Aman Ojha — AI-enabled Senior SDET with {yearsOfExperience}+ years of experience in test automation and quality engineering."
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Core skills across test automation, API testing, AI-augmented QA, and full-stack development.",
+      "metadata": {
+        "title": "Skills",
+        "description": "Aman Ojha's key skills in test automation, API testing, quality engineering, and AI."
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Showcasing impactful projects and technical achievements.",
+      "metadata": {
+        "title": "Projects",
+        "description": "Aman Ojha's projects across test automation, AI, and full-stack development."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Let's connect and explore collaborations.",
+      "metadata": {
+        "title": "Contact",
+        "description": "Contact Aman Ojha."
+      }
+    },
+    "contributions": {
+      "title": "Contributions",
+      "description": "Open-source contributions and community involvement.",
+      "metadata": {
+        "title": "Contributions",
+        "description": "Aman Ojha's open-source contributions and community involvement."
+      }
+    },
+    "resume": {
+      "title": "Resume",
+      "description": "Aman Ojha's resume.",
+      "metadata": {
+        "title": "Resume",
+        "description": "Aman Ojha's resume."
+      }
+    },
+    "blogs": {
+      "title": "Blogs",
+      "description": "Thoughts on AI, software engineering, and building in public.",
+      "metadata": {
+        "title": "Blogs",
+        "description": "Aman Ojha's blog — thoughts on AI, software engineering, and building in public."
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "Professional journey and career timeline.",
+      "metadata": {
+        "title": "Experience",
+        "description": "Aman Ojha's professional journey as an AI-enabled Senior Software Development Engineer in Test."
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "Selenium WebDriver",
+      "description": "Cross-browser UI automation with robust locators, waits, and the Page Object Model.",
+      "rating": 5,
+      "icon": "selenium"
+    },
+    {
+      "name": "Appium",
+      "description": "Mobile test automation for native, hybrid, and web apps on Android and iOS.",
+      "rating": 5,
+      "icon": "appium"
+    },
+    {
+      "name": "REST Assured",
+      "description": "Fluent API automation with request/response validation and field-level data checks.",
+      "rating": 5,
+      "icon": "api"
+    },
+    {
+      "name": "TestNG",
+      "description": "Test orchestration, data-driven suites, parallel execution, and rich assertions.",
+      "rating": 5,
+      "icon": "testng"
+    },
+    {
+      "name": "Java",
+      "description": "Primary language for automation frameworks and enterprise backend services.",
+      "rating": 5,
+      "icon": "java"
+    },
+    {
+      "name": "Python",
+      "description": "Scripting for data validation, backend checks, and AI-driven test tooling.",
+      "rating": 5,
+      "icon": "python"
+    },
+    {
+      "name": "Page Object Model",
+      "description": "Maintainable automation architecture separating locators, actions, and tests.",
+      "rating": 4,
+      "icon": "pom"
+    },
+    {
+      "name": "WinAppDriver",
+      "description": "Desktop application automation for Windows UI workflows and regression suites.",
+      "rating": 4,
+      "icon": "desktop"
+    },
+    {
+      "name": "Playwright",
+      "description": "Fast, reliable end-to-end testing across modern browsers with auto-waiting.",
+      "rating": 4,
+      "icon": "playwright"
+    },
+    {
+      "name": "Cypress",
+      "description": "Developer-friendly end-to-end and component testing for web applications.",
+      "rating": 4,
+      "icon": "cypress"
+    },
+    {
+      "name": "Postman",
+      "description": "API exploration, collection-based testing, and automated request validation.",
+      "rating": 4,
+      "icon": "postman"
+    },
+    {
+      "name": "JUnit 5",
+      "description": "Unit and integration testing foundation for JVM-based applications.",
+      "rating": 4,
+      "icon": "junit"
+    },
+    {
+      "name": "Cucumber (BDD)",
+      "description": "Behavior-driven development with readable Gherkin scenarios and step definitions.",
+      "rating": 4,
+      "icon": "cucumber"
+    },
+    {
+      "name": "Performance Testing",
+      "description": "Load and performance testing to validate throughput, latency, and stability.",
+      "rating": 4,
+      "icon": "jmeter"
+    },
+    {
+      "name": "AI-Assisted Test Automation",
+      "description": "Using LLMs to generate, heal, and prioritize automated tests.",
+      "rating": 4,
+      "icon": "aiTesting"
+    },
+    {
+      "name": "OpenAI / LLM APIs",
+      "description": "Integrating large language models for intelligent, context-aware test workflows.",
+      "rating": 4,
+      "icon": "openai"
+    },
+    {
+      "name": "Prompt Engineering",
+      "description": "Designing reliable prompts to get accurate, structured LLM outputs.",
+      "rating": 4,
+      "icon": "prompt"
+    },
+    {
+      "name": "TypeScript",
+      "description": "Type-safe JavaScript for test tooling and full-stack applications.",
+      "rating": 4,
+      "icon": "typescript"
+    },
+    {
+      "name": "JavaScript",
+      "description": "Core language for web automation, tooling, and Node.js services.",
+      "rating": 4,
+      "icon": "javascript"
+    },
+    {
+      "name": "SQL (MySQL / SQL Server)",
+      "description": "Query design and data validation across relational databases.",
+      "rating": 4,
+      "icon": "sql"
+    },
+    {
+      "name": "Apache Kafka",
+      "description": "Event-stream validation and messaging pipelines for distributed systems.",
+      "rating": 4,
+      "icon": "kafka"
+    },
+    {
+      "name": "Maven",
+      "description": "Dependency management and build lifecycle for Java test frameworks.",
+      "rating": 4,
+      "icon": "maven"
+    },
+    {
+      "name": "Git & GitHub",
+      "description": "Version control, branching strategies, and collaborative code review.",
+      "rating": 4,
+      "icon": "git"
+    },
+    {
+      "name": "GitHub Actions",
+      "description": "CI/CD pipelines that build and run automated test suites on every push.",
+      "rating": 4,
+      "icon": "githubActions"
+    },
+    {
+      "name": "Jenkins",
+      "description": "Continuous integration orchestration for scheduled and triggered test runs.",
+      "rating": 4,
+      "icon": "jenkins"
+    },
+    {
+      "name": "Jira",
+      "description": "Agile test and defect management with traceable, linkable work items.",
+      "rating": 4,
+      "icon": "jira"
+    },
+    {
+      "name": "Extent / Allure Reports",
+      "description": "Rich, human-readable test reporting with logs and per-step validation.",
+      "rating": 4,
+      "icon": "reports"
+    },
+    {
+      "name": "Confluence",
+      "description": "Structured test documentation, HLTS pages, and shared team knowledge.",
+      "rating": 4,
+      "icon": "confluence"
+    },
+    {
+      "name": "Next.js",
+      "description": "Full-stack React framework with routing, server components, and API routes.",
+      "rating": 4,
+      "icon": "nextjs"
+    },
+    {
+      "name": "React",
+      "description": "Component-driven interfaces and interactive web application front ends.",
+      "rating": 4,
+      "icon": "react"
+    },
+    {
+      "name": "Tailwind CSS",
+      "description": "Utility-first styling for fast, consistent, responsive UI.",
+      "rating": 4,
+      "icon": "tailwindcss"
+    },
+    {
+      "name": "Machine Learning",
+      "description": "Applied ML concepts to support intelligent testing and data workflows.",
+      "rating": 3,
+      "icon": "ml"
+    },
+    {
+      "name": "Hugging Face",
+      "description": "Open-source models and datasets for NLP and AI experiments.",
+      "rating": 3,
+      "icon": "huggingface"
+    },
+    {
+      "name": "Spring Boot",
+      "description": "Java backend APIs and services, tested end-to-end with automation.",
+      "rating": 3,
+      "icon": "spring"
+    },
+    {
+      "name": "Node.js",
+      "description": "Server-side JavaScript for APIs, tooling, and automation utilities.",
+      "rating": 3,
+      "icon": "nodejs"
+    },
+    {
+      "name": "Azure",
+      "description": "Cloud services, hosting, and deployment for applications and pipelines.",
+      "rating": 3,
+      "icon": "azure"
+    },
+    {
+      "name": "Docker",
+      "description": "Containerized environments for reproducible builds and test runs.",
+      "rating": 3,
+      "icon": "docker"
+    },
+    {
+      "name": "Kubernetes",
+      "description": "Container orchestration for scalable, resilient deployments.",
+      "rating": 3,
+      "icon": "kubernetes"
+    },
+    {
+      "name": "Azure Cosmos DB",
+      "description": "Globally distributed NoSQL data store for cloud applications.",
+      "rating": 3,
+      "icon": "database"
+    },
+    {
+      "name": "Firebase",
+      "description": "Auth, Firestore, and real-time backend for web and mobile apps.",
+      "rating": 3,
+      "icon": "firebase"
+    },
+    {
+      "name": "Flutter",
+      "description": "Cross-platform mobile development for production Android apps.",
+      "rating": 3,
+      "icon": "flutter"
+    }
+  ],
+  "projects": [
+    {
+      "id": "coles-mate-wave-3",
+      "companyName": "Coles MATE (Wave 3)",
+      "type": "Professional",
+      "category": [
+        "QA / Automation"
+      ],
+      "shortDescription": "Unified test framework integrating REST Assured API automation into the existing Appium mobile suite via shared MessageFactory classes — enabling full API and mobile test coverage with zero codebase refactoring.",
+      "techStack": [
+        "REST Assured",
+        "Appium",
+        "Selenium",
+        "Java",
+        "TestNG",
+        "Page Object Model",
+        "Extent Reports",
+        "Kafka"
+      ],
+      "startDate": "2023-01-01",
+      "endDate": "Present",
+      "companyLogoImg": "/projects/coles-mate-wave-3/logo.png",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "As a QA Automation Engineer on the Coles MATE Project (Wave 3) at Infosys, architected a unified test framework by integrating REST Assured API automation into the existing Appium mobile suite via shared MessageFactory classes — enabling full API and mobile test coverage with zero codebase refactoring, an approach recognized by the client for significantly accelerating test delivery."
+        ],
+        "bullets": [
+          "Designed and implemented API validation pipelines for the Goods In Transit module, covering request/response verification, field-level data integrity checks, and backend workflow accuracy across inventory and supply chain services.",
+          "Generated human-readable Extent Reports with structured logs and detailed per-field validations, improving test transparency and reducing debugging time across regression cycles.",
+          "Collaborated with developers and QA leads during regression cycles to triage and resolve automation failures, maintaining reliable test execution across iterative releases."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "coles-mate-wave-2",
+      "companyName": "Coles MATE (Wave 2)",
+      "type": "Professional",
+      "category": [
+        "QA / Automation"
+      ],
+      "shortDescription": "Mobile test automation suites using Appium, Java, TestNG, and POM for retail store workflows covering inventory management, rework processing, and item operations.",
+      "techStack": [
+        "Appium",
+        "Selenium",
+        "Java",
+        "TestNG",
+        "Page Object Model"
+      ],
+      "startDate": "2021-10-15",
+      "endDate": "2022-12-31",
+      "companyLogoImg": "/projects/coles-mate-wave-2/logo.png",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "As a Mobile Automation Engineer on the Coles MATE Project (Wave 2) at Infosys, built and maintained mobile test automation suites using Appium, Java, TestNG, and POM for retail store workflows covering inventory management, rework processing, and item operations."
+        ],
+        "bullets": [
+          "Diagnosed and resolved a critical protocol incompatibility in the locationsv2 data connection layer, rewriting the affected connection logic across 22 test cases in the Rework module to restore full automation coverage.",
+          "Resolved automation failures across 3 modules (Rework, Item Lookup, Store Use) and participated in 6 regression cycles, maintaining suite stability through active concurrent development sprints."
+        ]
+      }
+    },
+    {
+      "id": "rms-desktop-automation",
+      "companyName": "RMS Desktop Automation Stabilization",
+      "type": "Professional",
+      "category": [
+        "QA / Automation",
+        "Testing"
+      ],
+      "shortDescription": "Recovered a near-zero-pass-rate desktop automation suite of 200+ scripts built on Selenium and WinAppDriver — full suite-wide coverage restored in under 6 weeks.",
+      "techStack": [
+        "Selenium",
+        "WinAppDriver",
+        "Java",
+        "TestNG",
+        "Page Object Model"
+      ],
+      "startDate": "2022-06-01",
+      "endDate": "2023-01-01",
+      "companyLogoImg": "/projects/rms-desktop-automation/logo.png",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Inherited a near-zero-pass-rate desktop automation suite of 200+ scripts built on Selenium and WinAppDriver for the Retail Management System (RMS), where multiple system updates had invalidated element locators across all test modules."
+        ],
+        "bullets": [
+          "Diagnosed root causes across all 200+ failing scripts, systematically updating locators and test logic to restore suite-wide coverage — completing the full recovery in under 6 weeks.",
+          "Delivered a fully recovered, stable regression suite and earned direct client recognition for the speed and quality of the turnaround."
+        ]
+      }
+    },
+    {
+      "id": "reddit-saved-repost-recommender",
+      "companyName": "Reddit Saved Repost Recommender",
+      "type": "Personal",
+      "category": [
+        "Web Dev",
+        "Frontend"
+      ],
+      "shortDescription": "Reddit Saved re-Post Recommender — local-only Chrome MV3 extension that ranks your saved posts by engagement and opens pre-filled repost drafts. Read-only by default; no credentials, no API keys, no remote resources.",
+      "githubLink": "https://github.com/justaman045/reddit-saved-repost-recommender",
+      "techStack": [
+        "JavaScript",
+        "Bookmarks",
+        "Chrome Extension",
+        "Chrome MV3",
+        "Zero Dependencies",
+        "Privacy-First",
+        "Reddit",
+        "Saved Posts"
+      ],
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/reddit-saved-repost-recommender",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "A local-only Chrome (Manifest V3) extension that ranks your saved Reddit posts",
+          "by engagement and opens Reddit's submit page pre-filled so you can manually repost.",
+          "No credentials, no API keys, no telemetry, and no remote resources."
+        ],
+        "bullets": [
+          "Engagement ranking — a deterministic 0–100 score from upvotes, comments,",
+          "Pre-filled repost drafts — opens reddit.com/submit with the right URL or",
+          "Filters — minimum score, subreddit, hide queued, hide posts you already",
+          "Queue — track posts you plan to repost; deduped by name and by content key",
+          "\"Check my posts\" — fetch your submission history to detect posts you've",
+          "Notes & tags — attach a note and up to a few tags to any saved post (opt-in,",
+          "Export — download the current filtered view as CSV or JSON.",
+          "Opt-in unsave — optionally unsave a post from the popup. This is the only"
+        ]
+      }
+    },
+    {
+      "id": "wealthsync",
+      "companyName": "WealthSync",
+      "type": "Personal",
+      "category": [
+        "Mobile Dev",
+        "Full Stack"
+      ],
+      "shortDescription": "Privacy-first AI finance app with SMS auto-parsing & 24 asset tracking",
+      "githubLink": "https://github.com/justaman045/WealthSync",
+      "techStack": [
+        "Dart",
+        "Android",
+        "Expense Tracking",
+        "Fintech",
+        "Firebase",
+        "Flutter",
+        "GetX",
+        "Money Management"
+      ],
+      "startDate": "2025-11-07",
+      "endDate": "2026-09-27",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/WealthSync",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Most finance apps are cluttered, invasive, or ugly. WealthSync is a modern, privacy-first financial companion that combines beautiful design with powerful automation and complete wealth tracking.",
+          "Latest APK: https://github.com/justaman045/WealthSync/releases/download/v2.0.159/app-release.apk",
+          "Installation: Download the .apk on your Android device, open it, and allow installation from unknown sources."
+        ],
+        "bullets": [
+          "Dashboard — Monthly balance, spending trends, quick insights",
+          "Expense Tracking — Add income/expenses in seconds",
+          "Visual Analytics — Interactive charts (flchart)",
+          "Wealth Portfolio — 24 asset types, custom entries, targets",
+          "Custom Categories — Organize spending your way",
+          "Offline Support — Full functionality without internet",
+          "Biometric Lock — Fingerprint / face unlock",
+          "Budgeting — Monthly budgets with alerts"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "naukri-profile-updater",
+      "companyName": "Naukri Profile Updater",
+      "type": "Personal",
+      "category": [
+        "Backend"
+      ],
+      "shortDescription": "Cross-platform desktop app (Windows/macOS/Linux) to view and update your Naukri profile headlessly over HTTP — no browser, no Selenium.",
+      "websiteLink": "https://github.com/justaman045/Naukri-Profile-Updater",
+      "githubLink": "https://github.com/justaman045/Naukri-Profile-Updater",
+      "techStack": [
+        "Python",
+        "Desktop App",
+        "Headless",
+        "Naukri",
+        "PyInstaller",
+        "PySide6",
+        "Qt",
+        "Resume"
+      ],
+      "startDate": "2026-09-02",
+      "endDate": "2026-09-26",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/Naukri-Profile-Updater",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "A cross-platform desktop app (Windows / macOS / Linux) for viewing and updating your",
+          "Naukri profile — completely headless (no browser window, no Selenium, no Playwright).",
+          "Everything runs over HTTP using Naukri's reverse-engineered internal services."
+        ],
+        "bullets": [
+          "Login — email + password, no browser and no OTP interaction needed.",
+          "View profile — name, headline, summary, skills, position, experience, CTC,",
+          "Edit — update your headline, name, and summary.",
+          "Refresh resume — downloads your current on-file resume, renames it to the",
+          "Settings — toggle the hidden Developer tools and configure an AI provider",
+          "Developer (hidden by default) — experimental AI field optimizer that rewrites a",
+          "About — application version, developer, license, credits, and session location.",
+          "Persistent session — you stay logged in across launches until your token/IP changes."
+        ]
+      }
+    },
+    {
+      "id": "nexus",
+      "companyName": "Nexus",
+      "type": "Personal",
+      "category": [
+        "Full Stack",
+        "Frontend",
+        "Backend"
+      ],
+      "shortDescription": "Modern software marketplace with Razorpay + Stripe & admin portal",
+      "websiteLink": "https://company-bice.vercel.app",
+      "githubLink": "https://github.com/justaman045/Nexus",
+      "techStack": [
+        "TypeScript",
+        "E-commerce",
+        "Firebase",
+        "Nextjs",
+        "Razorpay",
+        "Stripe",
+        "Tailwind",
+        "Deployed"
+      ],
+      "startDate": "2026-02-19",
+      "endDate": "2026-09-23",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/Nexus",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Selling digital products often requires complex payment handling, multi-currency support, and robust admin tools. Most solutions are either too expensive or lack flexibility.",
+          "Nexus provides a complete, production-ready e-commerce platform tailored for software and digital products."
+        ],
+        "bullets": [
+          "Demonstrates real e-commerce architecture",
+          "Shows ability to integrate multiple payment providers",
+          "Clean, modern frontend with excellent UX",
+          "Production-ready structure"
+        ]
+      }
+    },
+    {
+      "id": "nextround",
+      "companyName": "NextRound",
+      "type": "Personal",
+      "category": [
+        "Full Stack",
+        "Web Dev"
+      ],
+      "shortDescription": "AI-powered resume builder with ATS scoring, LaTeX templates & GitHub integration",
+      "websiteLink": "https://next-round-seven.vercel.app",
+      "githubLink": "https://github.com/justaman045/NextRound",
+      "techStack": [
+        "TypeScript",
+        "ATS",
+        "Resume & Cover Letters",
+        "Firebase",
+        "LaTeX",
+        "Nextjs",
+        "OpenRouter",
+        "Resume"
+      ],
+      "startDate": "2026-01-24",
+      "endDate": "2026-09-03",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/NextRound",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Creating a resume that passes Applicant Tracking Systems (ATS) while looking professional is extremely time-consuming. Most candidates struggle with:",
+          "NextRound solves this by combining AI intelligence with professional typesetting to help users create high-quality, ATS-optimized resumes in minutes.",
+          "Try it here: https://next-round-seven.vercel.app"
+        ],
+        "bullets": [
+          "Manually tailoring resumes for each job",
+          "Low ATS match scores",
+          "Inconsistent formatting across templates",
+          "Spending hours writing cover letters",
+          "Model Agnostic AI: Users can switch between different LLMs without changing the core logic.",
+          "LaTeX Engine: Uses Handlebars for dynamic content injection into professional LaTeX templates.",
+          "Real-time Sync: Firebase enables seamless experience across devices.",
+          "Scalable Admin Panel: Allows easy addition of new templates without code changes."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "jobtracker",
+      "companyName": "JobTracker",
+      "type": "Personal",
+      "category": [
+        "Full Stack",
+        "Frontend"
+      ],
+      "shortDescription": "Job application tracker with Kanban, offer comparison & PWA support",
+      "githubLink": "https://github.com/justaman045/JobTracker",
+      "techStack": [
+        "JavaScript",
+        "Firebase",
+        "Job Search",
+        "Kanban",
+        "Nextjs",
+        "PWA",
+        "React"
+      ],
+      "startDate": "2026-05-11",
+      "endDate": "2026-08-20",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/JobTracker",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Job application tracker with Kanban, offer comparison & PWA support"
+        ],
+        "bullets": [
+          "Kanban board for application stages",
+          "Offer comparison engine",
+          "Dark mode + PWA support",
+          "CSV/JSON export",
+          "Built with Next.js + Firebase",
+          "Next.js + TypeScript"
+        ]
+      }
+    },
+    {
+      "id": "linux-setup-scripts",
+      "companyName": "Linux Setup Scripts",
+      "type": "Personal",
+      "category": [
+        "Backend"
+      ],
+      "shortDescription": "One-stop collection of standalone bash scripts: Fedora system provisioning, portable Podman managers for n8n & Hermes, and a distro-agnostic GNOME theme pack installer.",
+      "githubLink": "https://github.com/justaman045/linux-setup-scripts",
+      "techStack": [
+        "Bash",
+        "Automation",
+        "DevOps",
+        "Fedora",
+        "GNOME",
+        "Hermes",
+        "Linux",
+        "n8n"
+      ],
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/linux-setup-scripts",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "A one-stop collection of standalone bash scripts to get a machine productive fast:",
+          "Every script is self-contained; nothing is imported or shared between them.",
+          "Interactive Fedora-only system setup. Select components from a checklist (whiptail, with plain-prompt fallback) and it installs everything in dependency order."
+        ],
+        "bullets": [
+          "Fedora system provisioning — dev tools, NVIDIA/CUDA, virtualization, flatpak, gaming and more",
+          "Portable container managers — run the n8n workflow runner and the Hermes AI agent with isolated Podman storage",
+          "GNOME theme pack — minimal, stable Colloid Dracula / BigSur / McMojave themes installable on any Linux distro",
+          "Fedora only — it validates via rpm -E %fedora and aborts on anything else.",
+          "Never run with sudo — the script refuses to run as root and will exit.",
+          "Needs an interactive terminal — no TTY means it exits immediately.",
+          "Components include: system update + dnf optimizations, RPM Fusion, NVIDIA drivers + CUDA, multimedia codecs, DaVinci Resolve, development tools, Flutter, virtualization, Flathub, gaming (Steam/MangoHud/gamemode), git identity, zsh setup, Android SDK, opencode, Claude, Ollama, Waydroid, Proton VPN, hardware tools, WiFi tweaks, n8n and Hermes runners, browsers, VS Code, nvm, and bloat removal.",
+          "Selecting NVIDIA/CUDA/multimedia/gaming automatically enables RPM Fusion; Jan auto-enables Flathub."
+        ]
+      }
+    },
+    {
+      "id": "multi-music-downloader",
+      "companyName": "Multi Music Downloader",
+      "type": "Personal",
+      "category": [
+        "Backend",
+        "Web Dev"
+      ],
+      "shortDescription": "Self-contained multi-account YouTube Music liked-music downloader with a terminal UI and a local web player. Downloads at 8 quality levels, tracks plays, and scrobbles to last.fm — all without leaving your machine.",
+      "githubLink": "https://github.com/justaman045/multi-music-downloader",
+      "techStack": [
+        "Python",
+        "Downloader",
+        "Music",
+        "Music Downloader",
+        "Self-Hosted",
+        "Terminal UI",
+        "Web Player",
+        "YouTube Music"
+      ],
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-15",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/multi-music-downloader",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "A self-contained, multi-account YouTube Music liked-music downloader with",
+          "a terminal UI (TUI) and a local Spotify-style web player. Add one or more",
+          "YouTube Music accounts, refresh your liked library, and download every liked"
+        ],
+        "bullets": [
+          "Multiple accounts — one sidebar, switch between them freely.",
+          "Full liked library — fetches the complete Liked Music playlist, not",
+          "Authentication from browser headers — paste a request copied from your",
+          "8 quality options, chosen per download session:",
+          "Immutable session settings — the quality/policy you pick stays fixed for",
+          "Skip or replace existing files at the selected quality.",
+          "Persistent per-track inventory — knows what was downloaded, at which",
+          "Smart scan — detects missing files, liked-but-never-downloaded tracks,"
+        ]
+      }
+    },
+    {
+      "id": "sdettracker",
+      "companyName": "SDET Learning Tracker",
+      "type": "Personal",
+      "category": [
+        "Frontend",
+        "Web Dev"
+      ],
+      "shortDescription": "React + Vite learning progress tracker with daily logs, interview preparation modules, roadmaps, and study notes. Built for SDET skill growth tracking.",
+      "websiteLink": "https://learning-tracker-sigma-dun.vercel.app",
+      "githubLink": "https://github.com/justaman045/SdetTracker",
+      "techStack": [
+        "JavaScript",
+        "Interview Prep",
+        "Learning",
+        "React",
+        "Sdet",
+        "Vite",
+        "Deployed"
+      ],
+      "startDate": "2026-05-11",
+      "endDate": "2026-08-07",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/SdetTracker",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "React + Vite learning progress tracker with daily logs, interview preparation modules, roadmaps, and study notes. Built for SDET skill growth tracking."
+        ],
+        "bullets": [
+          "Daily Logging — Record hours studied, topics covered, confidence level, and blockers",
+          "Study Roadmap — Pre-built SDET curriculum across 6 phases (Core Java → Selenium → API Testing → Appium → Frameworks → Advanced)",
+          "Interview Prep — Curated interview questions organized by topic with difficulty ratings",
+          "Notes — Markdown-based study notes with real-time Firebase sync",
+          "Progress Dashboard — Completion percentage, streaks, total hours, and motivational milestones",
+          "Auth — Firebase Authentication with Google sign-in"
+        ]
+      }
+    },
+    {
+      "id": "personaldashboard",
+      "companyName": "Personal Dashboard",
+      "type": "Personal",
+      "category": [
+        "Full Stack",
+        "Web Dev"
+      ],
+      "shortDescription": "Full-stack AI productivity SaaS with memory system & roleplay chat",
+      "websiteLink": "https://assistant-two-dun.vercel.app",
+      "githubLink": "https://github.com/justaman045/PersonalDashboard",
+      "techStack": [
+        "TypeScript",
+        "Ai",
+        "Firebase",
+        "Nextjs",
+        "OpenRouter",
+        "Productivity",
+        "SaaS",
+        "Deployed"
+      ],
+      "startDate": "2026-04-18",
+      "endDate": "2026-07-16",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/PersonalDashboard",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Professionals today juggle multiple disconnected tools for content, tasks, finance, and AI chat. This leads to context switching, lost data, and poor personalization.",
+          "PersonalDashboard solves this by building a unified, AI-native productivity platform with deep memory and personalization across all modules."
+        ],
+        "bullets": [
+          "Demonstrates complex full-stack architecture",
+          "Shows deep understanding of AI integration and memory systems",
+          "Includes real monetization (Razorpay subscriptions)",
+          "Handles multi-feature personalization at scale"
+        ]
+      }
+    },
+    {
+      "id": "veltro",
+      "companyName": "Veltro",
+      "type": "Personal",
+      "category": [
+        "Mobile Dev"
+      ],
+      "shortDescription": "AI task manager with smart scheduling, habits & Pomodoro (Flutter + OpenRouter)",
+      "githubLink": "https://github.com/justaman045/Veltro",
+      "techStack": [
+        "Dart",
+        "Ai",
+        "Firebase",
+        "Flutter",
+        "Habit Tracking",
+        "OpenRouter",
+        "Pomodoro",
+        "Task Management"
+      ],
+      "startDate": "2026-03-31",
+      "endDate": "2026-06-21",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/Veltro",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Most task managers are either too simple or overly complex. Users struggle with:",
+          "Veltro combines AI intelligence with beautiful mobile UX to solve these problems."
+        ],
+        "bullets": [
+          "Poor scheduling",
+          "Lack of habit building",
+          "No intelligent prioritization",
+          "Fragmented experience across devices",
+          "Demonstrates strong mobile development skills",
+          "Shows AI integration in a practical product",
+          "Clean architecture with offline-first design",
+          "Real user value in productivity space"
+        ]
+      }
+    },
+    {
+      "id": "saaswaitlist",
+      "companyName": "SaaSWaitlist",
+      "type": "Personal",
+      "category": [
+        "Full Stack",
+        "Web Dev"
+      ],
+      "shortDescription": "Modern SaaS waitlist management platform — browse upcoming projects, join waitlists, and manage submissions via an admin dashboard. Built with Next.js 16, Firebase, and Cloudinary.",
+      "websiteLink": "https://projektnotify.vercel.app",
+      "githubLink": "https://github.com/justaman045/SaaSWaitlist",
+      "techStack": [
+        "TypeScript",
+        "Cloudinary",
+        "Firebase",
+        "Framer Motion",
+        "Nextjs",
+        "SaaS",
+        "Waitlist SaaS",
+        "Deployed"
+      ],
+      "startDate": "2025-12-08",
+      "endDate": "2026-05-31",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/SaaSWaitlist",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Modern SaaS waitlist management platform — browse upcoming projects, join waitlists, and manage submissions via an admin dashboard. Built with Next.js 16, Firebase, and Cloudinary."
+        ],
+        "bullets": [
+          "Project Showcase — Browse featured SaaS projects with rich detail pages, image galleries, and tech stack info",
+          "Waitlist Management — Join waitlists for upcoming projects with email verification and duplicate detection",
+          "Admin Dashboard — Full CRUD for projects, status management (Live / Coming Soon), image upload via Cloudinary",
+          "Search & Filter — Real-time debounced search across projects with URL-based query params",
+          "Content Editor — Markdown-supported project descriptions with live preview",
+          "Responsive Design — Dark mode, animated UI with Framer Motion, mobile-first layout"
+        ]
+      }
+    }
+  ],
+  "experience": [
+    {
+      "id": "infosys",
+      "position": "Software Quality Engineer",
+      "company": "Infosys Ltd.",
+      "location": "Gurgaon, Haryana",
+      "startDate": "2021-10-01",
+      "endDate": "Present",
+      "description": [
+        "QA Automation Engineer for the Coles MATE Project — architected a unified test framework integrating REST Assured API automation into the existing Appium mobile suite via shared MessageFactory classes, achieving full API and mobile coverage with zero codebase refactoring.",
+        "Designed and implemented API validation pipelines for the Goods In Transit module, covering request/response verification, field-level data integrity checks, and backend workflow accuracy across inventory and supply chain services.",
+        "Built and maintained mobile test automation suites using Appium, Java, TestNG, and the Page Object Model for Coles retail store workflows across MATE Waves 2 and 3.",
+        "Recovered a near-zero-pass-rate desktop automation suite of 200+ Selenium and WinAppDriver scripts for the Retail Management System (RMS) in under 6 weeks.",
+        "Owned the full STLC across Coles (Blue Yonder SSS) and FiveBelow (retail e-commerce) initiatives — HLTS authoring, functional/regression/integration testing, Kafka/SQL backend validation, and defect verification in Jira."
+      ],
+      "achievements": [
+        "Architected a client-recognized unified test framework integrating REST Assured API tests into an existing Appium suite via shared MessageFactory classes, delivering full API + mobile coverage with zero structural refactoring.",
+        "Diagnosed and resolved a critical protocol incompatibility in the locationsv2 data connection layer, rewriting affected connection logic across 22 test cases to restore full automation coverage.",
+        "Recovered a failing 200+ script desktop automation suite in under 6 weeks by systematically updating locators and test logic, earning direct client recognition for the turnaround.",
+        "Contributed to multiple production releases with zero defect escapes through thorough manual validation and systematic defect retesting before each deployment.",
+        "Independently authored High-Level Test Scenarios and end-to-end test cases for Coles Blue Yonder space-planning features, managing the full documentation lifecycle across Confluence and Jira.",
+        "Generated human-readable Extent Reports with structured logs and per-field validations, improving test transparency and cutting debugging time across regression cycles.",
+        "Solely responsible for daily Purchase Order generation and backend validation for FiveBelow, ensuring each order was accurately created, confirmed in the database, and evidenced in Jira."
+      ],
+      "skills": [
+        "Selenium WebDriver",
+        "Appium",
+        "WinAppDriver",
+        "REST Assured",
+        "Postman",
+        "Java",
+        "Python",
+        "TestNG",
+        "Page Object Model",
+        "Maven",
+        "Apache Kafka",
+        "SQL",
+        "Extent Reports",
+        "Jenkins",
+        "Jira",
+        "Confluence",
+        "Git",
+        "GitHub"
+      ],
+      "companyUrl": "https://www.infosys.com",
+      "logo": "/experience/infosys-logo.png"
+    },
+    {
+      "id": "codedamn",
+      "position": "Technical Writer",
+      "company": "Codedamn",
+      "location": "Remote",
+      "startDate": "2022-09-01",
+      "endDate": "2023-02-01",
+      "description": [
+        "Authored 15+ technical articles on software testing, development, and programming for a developer-focused learning platform, accumulating 4,000+ reads across publications.",
+        "Produced structured content aligned with platform learning paths, covering beginner-to-intermediate topics in testing and backend development."
+      ],
+      "achievements": [
+        "Authored 15+ technical articles accumulating 4,000+ reads across a developer-focused platform.",
+        "Produced structured, beginner-to-intermediate content aligned with platform learning paths."
+      ],
+      "skills": [
+        "Technical Writing",
+        "JavaScript",
+        "Python",
+        "Software Testing",
+        "Documentation"
+      ],
+      "companyUrl": "https://codedamn.com",
+      "logo": "/experience/codedamn-logo.png"
+    }
+  ],
+  "contributions": [
+    {
+      "repo": "codedamn-hacktoberfest-projects",
+      "contibutionDescription": "Added a complete Disney+ clone project to the Codedamn Hacktoberfest showcase.",
+      "repoOwner": "codedamn",
+      "link": "https://github.com/codedamn/codedamn-hacktoberfest-projects/pull/105"
+    },
+    {
+      "repo": "dsalgo",
+      "contibutionDescription": "Wrote and updated the contribution guide with clear onboarding steps for new contributors.",
+      "repoOwner": "manan-shxrma",
+      "link": "https://github.com/manan-shxrma/dsalgo/pull/116"
+    },
+    {
+      "repo": "dsalgo",
+      "contibutionDescription": "Improved the repository README to document project structure and usage.",
+      "repoOwner": "manan-shxrma",
+      "link": "https://github.com/manan-shxrma/dsalgo/pull/52"
+    },
+    {
+      "repo": "HacktoberFest2022",
+      "contibutionDescription": "Contributed a Binary Insertion Sort implementation to the HacktoberFest2022 collection.",
+      "repoOwner": "theutpal01",
+      "link": "https://github.com/theutpal01/HacktoberFest2022/pull/20"
+    },
+    {
+      "repo": "GitHubGraduation-2022",
+      "contibutionDescription": "Applied to the GitHub Class of 2022 Graduate program with student profile details.",
+      "repoOwner": "github-education-resources",
+      "link": "https://github.com/github-education-resources/GitHubGraduation-2022/pull/1085"
+    }
+  ],
+  "blog": {
+    "priority": [
+      "local",
+      "hashnode",
+      "devto",
+      "medium",
+      "codedamn"
+    ],
+    "sources": {
+      "devto": {
+        "username": "justaman045"
+      },
+      "hashnode": {
+        "username": "justaman045"
+      },
+      "medium": {
+        "username": "justaman045"
+      },
+      "codedamn": {
+        "host": ""
+      }
+    },
+    "featured": [],
+    "ignoreTitles": [
+      "Test Post - Direct API Test"
+    ]
+  }
+}

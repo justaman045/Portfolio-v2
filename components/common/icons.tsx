@@ -8,8 +8,18 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
+  Bot,
+  Brain,
   Clock,
+  Cloud,
   CreditCard,
+  Database,
+  FileBarChart,
+  Layers,
+  ListChecks,
+  Monitor,
+  Network,
+  TestTube2,
   File,
   FileText,
   HelpCircle,
@@ -37,6 +47,8 @@ import {
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
 import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs";
+import { DiMsqlServer } from "react-icons/di";
+import { FaJava } from "react-icons/fa6";
 import {
   HiBriefcase,
   HiOutlineExternalLink,
@@ -46,13 +58,30 @@ import { IoIosGitBranch } from "react-icons/io";
 import {
   SiAmazonwebservices,
   SiAngular,
+  SiApachejmeter,
+  SiApachekafka,
+  SiApachemaven,
+  SiAppium,
   SiBootstrap,
+  SiConfluence,
   SiCss3,
+  SiCucumber,
+  SiCypress,
+  SiDocker,
   SiExpress,
+  SiFirebase,
+  SiFlutter,
+  SiGit,
+  SiGithubactions,
   SiGmail,
   SiGraphql,
   SiHtml5,
+  SiHuggingface,
   SiJavascript,
+  SiJenkins,
+  SiJira,
+  SiJunit5,
+  SiKubernetes,
   SiLinkedin,
   SiMongodb,
   SiMui,
@@ -61,9 +90,14 @@ import {
   SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
+  SiOpenai,
+  SiPostman,
+  SiPython,
   SiReact,
   SiRedux,
+  SiSelenium,
   SiSocketdotio,
+  SiSpringboot,
   SiTailwindcss,
   SiTypescript,
   SiX,
@@ -105,6 +139,41 @@ export const Icons = {
   link: HiOutlineLink,
   externalLink: HiOutlineExternalLink,
   star: AiFillStar,
+  selenium: SiSelenium,
+  appium: SiAppium,
+  api: Network,
+  testng: ListChecks,
+  java: FaJava,
+  python: SiPython,
+  pom: Layers,
+  desktop: Monitor,
+  playwright: TestTube2,
+  cypress: SiCypress,
+  postman: SiPostman,
+  junit: SiJunit5,
+  cucumber: SiCucumber,
+  jmeter: SiApachejmeter,
+  aiTesting: Bot,
+  openai: SiOpenai,
+  prompt: Sparkles,
+  sql: DiMsqlServer,
+  kafka: SiApachekafka,
+  maven: SiApachemaven,
+  git: SiGit,
+  githubActions: SiGithubactions,
+  jenkins: SiJenkins,
+  jira: SiJira,
+  reports: FileBarChart,
+  confluence: SiConfluence,
+  ml: Brain,
+  huggingface: SiHuggingface,
+  spring: SiSpringboot,
+  azure: Cloud,
+  docker: SiDocker,
+  kubernetes: SiKubernetes,
+  database: Database,
+  firebase: SiFirebase,
+  flutter: SiFlutter,
   amazonaws: SiAmazonwebservices,
   angular: SiAngular,
   bootstrap: SiBootstrap,
@@ -163,10 +232,10 @@ export const Icons = {
           className="tick"
           fill="none"
           stroke="currentColor"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-miterlimit="10"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
           d="M14 27l5.917 4.917L34 17"
         />
       </svg>

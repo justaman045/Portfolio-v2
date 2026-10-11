@@ -69,7 +69,9 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "3D Modeling"
+  | "QA / Automation"
+  | "Testing";
 
 export type ValidExpType = "Personal" | "Professional";
 

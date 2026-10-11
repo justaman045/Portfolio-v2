@@ -1,149 +1,57 @@
-<a href="https://buymeachai.ezee.li/namanbarkiya" target="_blank" rel="noopener noreferrer"><img src="https://res.cloudinary.com/dvt5vkfwz/image/upload/v1767625332/buy_chai_naman.png" alt="Buy Me A Chai" width="200"></a>
+# Portfolio
 
-# Next.js 16 Developer Portfolio Template
+A personal portfolio built with **Next.js 16** (App Router, Turbopack), **React 19**, **TypeScript**, **Tailwind CSS**, and **shadcn/ui**.
 
-A modern, responsive, and SEO-optimized **Next.js 16 portfolio template** designed for developers, designers, and professionals. This open-source project helps you showcase your skills, experience, and projects with an elegant interface that stands out. Built with server-side rendering, TypeScript, and the latest web standards for optimal performance.
+All displayable content lives in a single file — [`content/portfolio.json`](./content/portfolio.json) — so you can update the whole site without touching component code.
 
-## ✨ Key Features
+## Getting started
 
-- **Professional Experience Timeline**: Showcase your career journey with a visually appealing timeline
-- **Project Showcase**: Display your technical projects with detailed information and live demos
-- **Multiple Themes**: Dark, Light, Retro, Cyberpunk, Aurora, Synthwave, and Paper themes
-- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
-- **100% Performance Score**: Fully optimized for speed and Core Web Vitals
-- **SEO-Ready**: Structured data, meta tags, and optimized content
-- **Modern Tech Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS, and shadcn/ui
-- **Easy Customization**: Well-organized code structure with minimal effort required
-- **Animations**: Subtle animations for engaging user experience
-- **Analytics Integration**: Ready for Google Analytics tracking
-- **Contact Form**: Functional contact form with validation
-- **Open Source**: Free to use and modify for your personal portfolio
+```bash
+cp .env.copy .env   # then fill in the values (see below)
+npm install
+npm run dev
+```
 
-## 🚀 Demo
+Open [http://localhost:3000](http://localhost:3000).
 
-View the live demo at [https://nbarkiya.xyz/](https://nbarkiya.xyz)
+### Environment variables
 
-https://github.com/namanbarkiya/minimal-next-portfolio/assets/82203888/f93bf5ca-c2bd-4fe5-a413-1050ebf6cf78
+`.env.copy` documents every variable. The app **throws at build/dev time** if `NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID` is missing.
 
-## Ranks #1 on AI Search (top-notch AEO/GEO)
+| Variable | Purpose |
+| --- | --- |
+| `CONTACT_SUBMIT_URL` | Contact form → Google Apps Script web app (appends to a Google Sheet) |
+| `NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID` | Google Analytics (required) |
+| `NEXT_PUBLIC_GOOGLE_VERIFICATION` | Google Search Console verification |
+| `NEXT_PUBLIC_DISCORD_LINK` | Community page redirect |
+| `NEXT_PUBLIC_RESUME_LINK` | Resume page redirect |
 
-https://github.com/user-attachments/assets/fc071310-9d1c-4832-877f-23f9569893d7
+## Editing content
 
-## 🛠️ Tech Stack
+Everything is in `content/portfolio.json`:
 
-- **Framework**: [Next.js 16](https://nextjs.org/) with Turbopack
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **UI Library**: [React 19](https://react.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Form Handling**: Server actions with validation
-- **Analytics**: Google Analytics + Vercel Analytics
-- **Deployment**: [Vercel](https://vercel.com)
+- `site` — name, role, tagline, URLs, social links, SEO images, keywords
+- `socials` — footer/social links (icons are string keys, e.g. `"gitHub"`)
+- `navigation` — the main nav items
+- `pages` — page titles/descriptions/metadata
+- `skills`, `projects`, `experience`, `contributions`
+- `blog` — external platform handles, dedup priority, and featured posts
 
-## 🔧 Getting Started
+The file is validated with Zod at load time. **Deleting it fails the build**, and malformed/missing fields throw with the exact field path so you never ship incomplete content.
 
-To get started with your own portfolio website:
+Dates are ISO strings (`"2024-08-01"`), or `"Present"` for current roles. Icons resolve through `lib/resolve-icon.ts` against `components/common/icons.tsx` — add new icon keys there first.
 
-1. Clone this repository:
+## Scripts
 
-   ```bash
-   git clone https://github.com/namanbarkiya/minimal-next-portfolio.git my-portfolio
-   cd my-portfolio
-   ```
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint |
+| `npm run typecheck` | `tsc --noEmit` |
+| `npm run format` | Prettier |
 
-2. Copy the contents of `.env.copy` to a new `.env` file and fill in the required information.
+## Blogs
 
-3. Install dependencies:
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your web browser to see the website.
-
-## 🎨 Customization
-
-Easily personalize your portfolio using the configuration files below:
-
-| Section            | How to Customize                                       | File Location             |
-| ------------------ | ------------------------------------------------------ | ------------------------- |
-| **Personal Info**  | Edit your name, bio, and social links                  | `config/site.ts`          |
-| **Skills**         | Add or modify the technologies and skills you showcase | `config/skills.ts`        |
-| **Projects**       | Highlight your technical projects                      | `config/projects.ts`      |
-| **Experience**     | Add your work and professional experience              | `config/experience.ts`    |
-| **Contributions**  | Display open-source/community contributions            | `config/contributions.ts` |
-| **Colors & Theme** | Customize color palette and themes                     | `tailwind.config.js`      |
-
-All configuration files are well-organized and documented for a smooth customization process.
-
-## 🌟 Features In Detail
-
-### Professional Experience Timeline
-
-An interactive, animated timeline that showcases your career journey with expandable sections for details about each position and company.
-
-### Project Showcase
-
-Display your technical projects with detailed information, technologies used, live demo links, and comprehensive project descriptions.
-
-### Skills Showcase
-
-Visually represent your technical and soft skills with customizable ratings and categories.
-
-### Contact Form Integration
-
-A ready-to-use contact form that can connect to various backend services.
-
-### SEO Optimization
-
-Built-in SEO features with proper meta tags, structured data, and semantic HTML.
-
-## 📱 Performance and Responsiveness
-
-![best-portfolio-website-score](https://github.com/namanbarkiya/minimal-next-portfolio/assets/82203888/3fb9c94d-9d99-4e98-92ea-14aadc91b568)
-![100-score-vercel](https://github.com/namanbarkiya/minimal-next-portfolio/assets/82203888/7cfe28cc-b619-4199-9dab-1cf16723b86d)
-
-This template is optimized for:
-
-- 100% Lighthouse score
-- Excellent Core Web Vitals metrics
-- Responsive design across all device sizes
-- Fast loading times with proper image optimization
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgements
-
-- Design inspired by modern portfolio best practices
-- Built by [Naman Barkiya](https://github.com/namanbarkiya)
-- Icons from [Lucide](https://lucide.dev/)
-
-## 💻 Deploy on Vercel
-
-The easiest way to deploy your portfolio is using [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), the platform from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=namanbarkiya/minimal-next-portfolio&type=Date)](https://star-history.com/#namanbarkiya/minimal-next-portfolio&Date)
-
----
-
-**Built with ❤️ by [Naman Barkiya](https://github.com/namanbarkiya)**
+Local posts live in `content/blogs/*.md` and render at `/blogs/[slug]`. External posts are pulled from dev.to, Hashnode (via its public RSS feed), Medium, and Codedamn (configured under `blog.sources`) and link out to their source. Posts are deduplicated by canonical URL **or** normalized title using the `blog.priority` order, and `blog.ignoreTitles` drops posts by title from both the listing and auto-featured selection.
