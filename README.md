@@ -18,13 +18,13 @@ Open [http://localhost:3000](http://localhost:3000).
 
 `.env.copy` documents every variable. The app **throws at build/dev time** if `NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID` is missing.
 
-| Variable | Purpose |
-| --- | --- |
-| `CONTACT_SUBMIT_URL` | Contact form → Google Apps Script web app (appends to a Google Sheet) |
-| `NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID` | Google Analytics (required) |
-| `NEXT_PUBLIC_GOOGLE_VERIFICATION` | Google Search Console verification |
-| `NEXT_PUBLIC_DISCORD_LINK` | Community page redirect |
-| `NEXT_PUBLIC_RESUME_LINK` | Resume page redirect |
+| Variable                            | Purpose                                                               |
+| ----------------------------------- | --------------------------------------------------------------------- |
+| `CONTACT_SUBMIT_URL`                | Contact form → Google Apps Script web app (appends to a Google Sheet) |
+| `NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID` | Google Analytics (required)                                           |
+| `NEXT_PUBLIC_GOOGLE_VERIFICATION`   | Google Search Console verification                                    |
+| `NEXT_PUBLIC_DISCORD_LINK`          | Community page redirect                                               |
+| `NEXT_PUBLIC_RESUME_LINK`           | Resume page redirect                                                  |
 
 ## Editing content
 
@@ -39,18 +39,20 @@ Everything is in `content/portfolio.json`:
 
 The file is validated with Zod at load time. **Deleting it fails the build**, and malformed/missing fields throw with the exact field path so you never ship incomplete content.
 
+The featured **Nexus** project links out to the live software company storefront at [nexusprods.vercel.app](https://nexusprods.vercel.app/).
+
 Dates are ISO strings (`"2024-08-01"`), or `"Present"` for current roles. Icons resolve through `lib/resolve-icon.ts` against `components/common/icons.tsx` — add new icon keys there first.
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the dev server |
-| `npm run build` | Production build |
-| `npm run start` | Serve the production build |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | `tsc --noEmit` |
-| `npm run format` | Prettier |
+| Command             | Description                |
+| ------------------- | -------------------------- |
+| `npm run dev`       | Start the dev server       |
+| `npm run build`     | Production build           |
+| `npm run start`     | Serve the production build |
+| `npm run lint`      | ESLint                     |
+| `npm run typecheck` | `tsc --noEmit`             |
+| `npm run format`    | Prettier                   |
 
 ## Blogs
 

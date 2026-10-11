@@ -5,7 +5,7 @@
     "username": "justaman045",
     "role": "AI Enabled Sr. Software Development Engineer in Test",
     "tagline": "AI Enabled Sr. Software Development Engineer in Test with {yearsOfExperience}+ years of experience building reliable, scalable, and AI-driven test systems.",
-    "description": "Aman Ojha - AI Enabled Sr. Software Development Engineer in Test working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
+    "description": "Aman Ojha - AI Enabled Sr. Software Development Engineer in Test working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI — including Nexus, the software company I'm building and selling software through.",
     "url": "https://justaman045.vercel.app",
     "links": {
       "twitter": "https://x.com/justaman045",
@@ -41,11 +41,24 @@
       "Databricks",
       "Data Engineering",
       "AI Startups",
+      "Nexus",
+      "Software Company",
+      "Founder",
+      "Software Entrepreneurship",
+      "SaaS",
+      "Licensed Software",
+      "Building in Public",
       "Tech Portfolio"
     ],
     "careerStartDate": "2021-10-25"
   },
   "socials": [
+    {
+      "name": "Nexus",
+      "username": "Nexus",
+      "icon": "externalLink",
+      "link": "https://nexusprods.vercel.app/"
+    },
     {
       "name": "Github",
       "username": "@justaman045",
@@ -93,11 +106,11 @@
         "title": "Blogs",
         "href": "/blogs"
       },
-{
-      "title": "Community",
-      "href": "/community",
-      "enabled": false
-    },
+      {
+        "title": "Community",
+        "href": "/community",
+        "enabled": false
+      },
       {
         "title": "Contact",
         "href": "/contact"
@@ -107,10 +120,10 @@
   "pages": {
     "home": {
       "title": "Home",
-      "description": "AI-enabled Senior SDET specializing in scalable test automation, API validation, and quality engineering for enterprise systems.",
+      "description": "AI-enabled Senior SDET specializing in scalable test automation, API validation, and quality engineering for enterprise systems, and founder of Nexus, a software company that ships quality products.",
       "metadata": {
         "title": "Home",
-        "description": "Aman Ojha — AI-enabled Senior SDET with {yearsOfExperience}+ years of experience in test automation and quality engineering."
+        "description": "Aman Ojha — AI-enabled Senior SDET with {yearsOfExperience}+ years of experience in test automation and quality engineering, currently building Nexus — a software company that ships quality products."
       }
     },
     "skills": {
@@ -123,10 +136,10 @@
     },
     "projects": {
       "title": "Projects",
-      "description": "Showcasing impactful projects and technical achievements.",
+      "description": "Showcasing impactful projects and technical achievements — including Nexus, the software company I'm building.",
       "metadata": {
         "title": "Projects",
-        "description": "Aman Ojha's projects across test automation, AI, and full-stack development."
+        "description": "Aman Ojha's projects across test automation, AI, and full-stack development — including Nexus, the software company he's building."
       }
     },
     "contact": {
@@ -163,10 +176,10 @@
     },
     "experience": {
       "title": "Experience",
-      "description": "Professional journey and career timeline.",
+      "description": "Professional journey and career timeline — from enterprise QA engineering to founding the software company Nexus.",
       "metadata": {
         "title": "Experience",
-        "description": "Aman Ojha's professional journey as an AI-enabled Senior Software Development Engineer in Test."
+        "description": "Aman Ojha's professional journey as an AI-enabled Senior Software Development Engineer in Test and founder of the software company Nexus."
       }
     }
   },
@@ -420,12 +433,47 @@
   ],
   "projects": [
     {
+      "id": "nexus",
+      "companyName": "Nexus",
+      "type": "Personal",
+      "category": ["Full Stack", "Frontend", "Backend"],
+      "shortDescription": "Founding engineer of Nexus — a software company that builds and sells quality software entirely in-house, with license-based delivery via Razorpay and a live storefront at nexusprods.vercel.app.",
+      "websiteLink": "https://nexusprods.vercel.app/",
+      "githubLink": "https://github.com/justaman045/Nexus",
+      "techStack": [
+        "TypeScript",
+        "Nextjs",
+        "Firebase",
+        "Razorpay",
+        "Flutter",
+        "AI",
+        "Tailwind",
+        "Licensing",
+        "Deployed"
+      ],
+      "startDate": "2026-02-19",
+      "endDate": "Present",
+      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/Nexus",
+      "pagesInfoArr": [],
+      "descriptionDetails": {
+        "paragraphs": [
+          "Nexus is a software company I founded and built end-to-end. Every product is designed, engineered, and shipped in-house — no resellers, no outsourced code.",
+          "Visitors browse a live catalogue, pay securely through Razorpay, and receive an instant license key they can access anytime from a personal Vault dashboard. The storefront runs on Firebase (Firestore + Auth), so the catalogue, orders, and admin product management stay live."
+        ],
+        "bullets": [
+          "A software company focused on building and selling quality products in-house, with new tools added over time",
+          "License-based access delivered instantly after checkout, with a Vault dashboard and email-based order tracking",
+          "Razorpay-powered checkout with a Firebase-backed catalogue and an admin portal to manage products",
+          "Visit the live storefront at nexusprods.vercel.app to see the current catalogue"
+        ]
+      },
+      "featured": true
+    },
+    {
       "id": "coles-mate-wave-3",
       "companyName": "Coles MATE (Wave 3)",
       "type": "Professional",
-      "category": [
-        "QA / Automation"
-      ],
+      "category": ["QA / Automation"],
       "shortDescription": "Unified test framework integrating REST Assured API automation into the existing Appium mobile suite via shared MessageFactory classes — enabling full API and mobile test coverage with zero codebase refactoring.",
       "techStack": [
         "REST Assured",
@@ -457,9 +505,7 @@
       "id": "coles-mate-wave-2",
       "companyName": "Coles MATE (Wave 2)",
       "type": "Professional",
-      "category": [
-        "QA / Automation"
-      ],
+      "category": ["QA / Automation"],
       "shortDescription": "Mobile test automation suites using Appium, Java, TestNG, and POM for retail store workflows covering inventory management, rework processing, and item operations.",
       "techStack": [
         "Appium",
@@ -486,10 +532,7 @@
       "id": "rms-desktop-automation",
       "companyName": "RMS Desktop Automation Stabilization",
       "type": "Professional",
-      "category": [
-        "QA / Automation",
-        "Testing"
-      ],
+      "category": ["QA / Automation", "Testing"],
       "shortDescription": "Recovered a near-zero-pass-rate desktop automation suite of 200+ scripts built on Selenium and WinAppDriver — full suite-wide coverage restored in under 6 weeks.",
       "techStack": [
         "Selenium",
@@ -516,10 +559,7 @@
       "id": "reddit-saved-repost-recommender",
       "companyName": "Reddit Saved Repost Recommender",
       "type": "Personal",
-      "category": [
-        "Web Dev",
-        "Frontend"
-      ],
+      "category": ["Web Dev", "Frontend"],
       "shortDescription": "Reddit Saved re-Post Recommender — local-only Chrome MV3 extension that ranks your saved posts by engagement and opens pre-filled repost drafts. Read-only by default; no credentials, no API keys, no remote resources.",
       "githubLink": "https://github.com/justaman045/reddit-saved-repost-recommender",
       "techStack": [
@@ -558,10 +598,7 @@
       "id": "wealthsync",
       "companyName": "WealthSync",
       "type": "Personal",
-      "category": [
-        "Mobile Dev",
-        "Full Stack"
-      ],
+      "category": ["Mobile Dev", "Full Stack"],
       "shortDescription": "Privacy-first AI finance app with SMS auto-parsing & 24 asset tracking",
       "githubLink": "https://github.com/justaman045/WealthSync",
       "techStack": [
@@ -601,9 +638,7 @@
       "id": "naukri-profile-updater",
       "companyName": "Naukri Profile Updater",
       "type": "Personal",
-      "category": [
-        "Backend"
-      ],
+      "category": ["Backend"],
       "shortDescription": "Cross-platform desktop app (Windows/macOS/Linux) to view and update your Naukri profile headlessly over HTTP — no browser, no Selenium.",
       "websiteLink": "https://github.com/justaman045/Naukri-Profile-Updater",
       "githubLink": "https://github.com/justaman045/Naukri-Profile-Updater",
@@ -640,52 +675,10 @@
       }
     },
     {
-      "id": "nexus",
-      "companyName": "Nexus",
-      "type": "Personal",
-      "category": [
-        "Full Stack",
-        "Frontend",
-        "Backend"
-      ],
-      "shortDescription": "Modern software marketplace with Razorpay + Stripe & admin portal",
-      "websiteLink": "https://company-bice.vercel.app",
-      "githubLink": "https://github.com/justaman045/Nexus",
-      "techStack": [
-        "TypeScript",
-        "E-commerce",
-        "Firebase",
-        "Nextjs",
-        "Razorpay",
-        "Stripe",
-        "Tailwind",
-        "Deployed"
-      ],
-      "startDate": "2026-02-19",
-      "endDate": "2026-09-23",
-      "companyLogoImg": "https://opengraph.githubassets.com/1/justaman045/Nexus",
-      "pagesInfoArr": [],
-      "descriptionDetails": {
-        "paragraphs": [
-          "Selling digital products often requires complex payment handling, multi-currency support, and robust admin tools. Most solutions are either too expensive or lack flexibility.",
-          "Nexus provides a complete, production-ready e-commerce platform tailored for software and digital products."
-        ],
-        "bullets": [
-          "Demonstrates real e-commerce architecture",
-          "Shows ability to integrate multiple payment providers",
-          "Clean, modern frontend with excellent UX",
-          "Production-ready structure"
-        ]
-      }
-    },
-    {
       "id": "nextround",
       "companyName": "NextRound",
       "type": "Personal",
-      "category": [
-        "Full Stack",
-        "Web Dev"
-      ],
+      "category": ["Full Stack", "Web Dev"],
       "shortDescription": "AI-powered resume builder with ATS scoring, LaTeX templates & GitHub integration",
       "websiteLink": "https://next-round-seven.vercel.app",
       "githubLink": "https://github.com/justaman045/NextRound",
@@ -726,10 +719,7 @@
       "id": "jobtracker",
       "companyName": "JobTracker",
       "type": "Personal",
-      "category": [
-        "Full Stack",
-        "Frontend"
-      ],
+      "category": ["Full Stack", "Frontend"],
       "shortDescription": "Job application tracker with Kanban, offer comparison & PWA support",
       "githubLink": "https://github.com/justaman045/JobTracker",
       "techStack": [
@@ -763,9 +753,7 @@
       "id": "linux-setup-scripts",
       "companyName": "Linux Setup Scripts",
       "type": "Personal",
-      "category": [
-        "Backend"
-      ],
+      "category": ["Backend"],
       "shortDescription": "One-stop collection of standalone bash scripts: Fedora system provisioning, portable Podman managers for n8n & Hermes, and a distro-agnostic GNOME theme pack installer.",
       "githubLink": "https://github.com/justaman045/linux-setup-scripts",
       "techStack": [
@@ -804,10 +792,7 @@
       "id": "multi-music-downloader",
       "companyName": "Multi Music Downloader",
       "type": "Personal",
-      "category": [
-        "Backend",
-        "Web Dev"
-      ],
+      "category": ["Backend", "Web Dev"],
       "shortDescription": "Self-contained multi-account YouTube Music liked-music downloader with a terminal UI and a local web player. Downloads at 8 quality levels, tracks plays, and scrobbles to last.fm — all without leaving your machine.",
       "githubLink": "https://github.com/justaman045/multi-music-downloader",
       "techStack": [
@@ -846,10 +831,7 @@
       "id": "sdettracker",
       "companyName": "SDET Learning Tracker",
       "type": "Personal",
-      "category": [
-        "Frontend",
-        "Web Dev"
-      ],
+      "category": ["Frontend", "Web Dev"],
       "shortDescription": "React + Vite learning progress tracker with daily logs, interview preparation modules, roadmaps, and study notes. Built for SDET skill growth tracking.",
       "websiteLink": "https://learning-tracker-sigma-dun.vercel.app",
       "githubLink": "https://github.com/justaman045/SdetTracker",
@@ -884,10 +866,7 @@
       "id": "personaldashboard",
       "companyName": "Personal Dashboard",
       "type": "Personal",
-      "category": [
-        "Full Stack",
-        "Web Dev"
-      ],
+      "category": ["Full Stack", "Web Dev"],
       "shortDescription": "Full-stack AI productivity SaaS with memory system & roleplay chat",
       "websiteLink": "https://assistant-two-dun.vercel.app",
       "githubLink": "https://github.com/justaman045/PersonalDashboard",
@@ -922,9 +901,7 @@
       "id": "veltro",
       "companyName": "Veltro",
       "type": "Personal",
-      "category": [
-        "Mobile Dev"
-      ],
+      "category": ["Mobile Dev"],
       "shortDescription": "AI task manager with smart scheduling, habits & Pomodoro (Flutter + OpenRouter)",
       "githubLink": "https://github.com/justaman045/Veltro",
       "techStack": [
@@ -962,10 +939,7 @@
       "id": "saaswaitlist",
       "companyName": "SaaSWaitlist",
       "type": "Personal",
-      "category": [
-        "Full Stack",
-        "Web Dev"
-      ],
+      "category": ["Full Stack", "Web Dev"],
       "shortDescription": "Modern SaaS waitlist management platform — browse upcoming projects, join waitlists, and manage submissions via an admin dashboard. Built with Next.js 16, Firebase, and Cloudinary.",
       "websiteLink": "https://projektnotify.vercel.app",
       "githubLink": "https://github.com/justaman045/SaaSWaitlist",
@@ -999,6 +973,37 @@
     }
   ],
   "experience": [
+    {
+      "id": "nexus",
+      "position": "Founder & Full-Stack Engineer",
+      "company": "Nexus",
+      "location": "Remote",
+      "logo": "https://nexusprods.vercel.app/favicon.ico?favicon.3fpu2ql9ns1a0.ico",
+      "companyUrl": "https://nexusprods.vercel.app/",
+      "startDate": "2026-02-19",
+      "endDate": "Present",
+      "description": [
+        "Founded and built Nexus — a software company that designs, engineers, and sells quality software products entirely in-house.",
+        "Own the full product lifecycle: live storefront, Razorpay checkout, instant license delivery, a Vault dashboard, and an admin portal on Firebase.",
+        "Products are licensed and sold directly with no resellers."
+      ],
+      "achievements": [
+        "Launched a live storefront at nexusprods.vercel.app selling software as instant-delivery licenses",
+        "Built the complete stack end-to-end: Next.js storefront, Firestore catalogue, Firebase Auth vault, Razorpay payments",
+        "Running a build-and-sell model with new quality products shipped over time"
+      ],
+      "skills": [
+        "Next.js",
+        "TypeScript",
+        "Firebase",
+        "Razorpay",
+        "Flutter",
+        "Tailwind CSS",
+        "Product Design",
+        "Software Licensing",
+        "AI"
+      ]
+    },
     {
       "id": "infosys",
       "position": "Software Quality Engineer",
@@ -1104,13 +1109,7 @@
     }
   ],
   "blog": {
-    "priority": [
-      "local",
-      "hashnode",
-      "devto",
-      "medium",
-      "codedamn"
-    ],
+    "priority": ["local", "hashnode", "devto", "medium", "codedamn"],
     "sources": {
       "devto": {
         "username": "justaman045"
@@ -1126,8 +1125,6 @@
       }
     },
     "featured": [],
-    "ignoreTitles": [
-      "Test Post - Direct API Test"
-    ]
+    "ignoreTitles": ["Test Post - Direct API Test"]
   }
 }

@@ -4,6 +4,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "nexusprods.vercel.app",
+      },
+      {
+        protocol: "https",
         hostname: "opengraph.githubassets.com",
       },
       {
