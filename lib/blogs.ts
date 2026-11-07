@@ -12,6 +12,24 @@ import { siteConfig } from "@/config/site";
 
 const BLOGS_DIR = path.join(process.cwd(), "content/blogs");
 
+// In-memory cache for external blog fetches (TTL: 1 hour) so repeated
+// requests to /blogs don't hammer external platforms on every render.
+const BLOG_CACHE_TTL_MS = 1000 * 60 * 60;
+const blogCache = new Map<string, { data: unknown; timestamp: number }>();
+
+function getCachedData(key: string): unknown | null {
+  const entry = blogCache.get(key);
+  if (!entry || Date.now() - entry.timestamp > BLOG_CACHE_TTL_MS) {
+    blogCache.delete(key);
+    return null;
+  }
+  return entry.data;
+}
+
+function setCachedData(key: string, data: unknown): void {
+  blogCache.set(key, { data, timestamp: Date.now() });
+}
+
 export type BlogSource = "local" | "devto" | "hashnode" | "medium" | "codedamn";
 
 export interface BlogFrontmatter {
@@ -109,6 +127,10 @@ async function fetchDevTo(): Promise<BlogMeta[]> {
   const username = portfolio.blog.sources.devto?.username?.trim();
   if (!username) return [];
 
+  const cacheKey = `devto:${username}`;
+  const cached = getCachedData(cacheKey);
+  if (cached) return cached as BlogMeta[];
+
   const res = await safeFetch(
     `https://dev.to/api/articles?username=${encodeURIComponent(
       username
@@ -128,7 +150,7 @@ async function fetchDevTo(): Promise<BlogMeta[]> {
     reading_time_minutes?: number;
   }>;
 
-  return articles.map((a) => ({
+  const result = articles.map((a) => ({
     slug: `devto-${a.id}`,
     source: "devto" as const,
     title: a.title,
@@ -140,11 +162,18 @@ async function fetchDevTo(): Promise<BlogMeta[]> {
     canonicalUrl: a.canonical_url || a.url,
     externalUrl: a.url,
   }));
+
+  setCachedData(cacheKey, result);
+  return result;
 }
 
 async function fetchHashnode(): Promise<BlogMeta[]> {
   const username = portfolio.blog.sources.hashnode?.username?.trim();
   if (!username) return [];
+
+  const cacheKey = `hashnode:${username}`;
+  const cached = getCachedData(cacheKey);
+  if (cached) return cached as BlogMeta[];
 
   // Hashnode's GraphQL API now requires a paid (Pro) plan, so we read the
   // publication's public RSS feed instead.
@@ -154,7 +183,9 @@ async function fetchHashnode(): Promise<BlogMeta[]> {
   if (!res) return [];
 
   try {
-    return parseRssFeed(await res.text(), "hashnode");
+    const result = parseRssFeed(await res.text(), "hashnode");
+    setCachedData(cacheKey, result);
+    return result;
   } catch {
     return [];
   }
@@ -226,10 +257,16 @@ async function fetchFeed(source: "medium" | "codedamn"): Promise<BlogMeta[]> {
     feedUrl = host;
   }
 
+  const cacheKey = `feed:${source}:${feedUrl}`;
+  const cached = getCachedData(cacheKey);
+  if (cached) return cached as BlogMeta[];
+
   const res = await safeFetch(feedUrl);
   if (!res) return [];
   try {
-    return parseRssFeed(await res.text(), source);
+    const result = parseRssFeed(await res.text(), source);
+    setCachedData(cacheKey, result);
+    return result;
   } catch {
     return [];
   }

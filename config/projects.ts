@@ -40,4 +40,4 @@ export const Projects: ProjectInterface[] = portfolio.projects.map((project) => 
 
 const featured = Projects.filter((project) => project.featured);
 export const featuredProjects =
-  featured.length > 0 ? featured.slice(0, 3) : Projects.slice(0, 3);
+  featured.length > 0 ? featured : Projects.slice(0, 3);

@@ -107,7 +107,6 @@ export default async function Project({ params }: ProjectPageProps) {
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Description
         </h2>
-        {/* {<project.descriptionComponent />} */}
         <ProjectDescription
           paragraphs={project.descriptionDetails.paragraphs}
           bullets={project.descriptionDetails.bullets}
@@ -134,7 +133,7 @@ export default async function Project({ params }: ProjectPageProps) {
                     width={720}
                     height={405}
                     className="my-4 rounded-md border bg-muted transition-colors"
-                    priority
+                    loading="lazy"
                   />
                 ))}
               </div>

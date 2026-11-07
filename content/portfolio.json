@@ -50,7 +50,7 @@
       "Building in Public",
       "Tech Portfolio"
     ],
-    "careerStartDate": "2021-10-25"
+    "careerStartDate": "2021-10-01"
   },
   "socials": [
     {
@@ -978,7 +978,7 @@
       "position": "Founder & Full-Stack Engineer",
       "company": "Nexus",
       "location": "Remote",
-      "logo": "https://nexusprods.vercel.app/favicon.ico?favicon.3fpu2ql9ns1a0.ico",
+      "logo": "https://nexusprods.vercel.app/favicon.ico",
       "companyUrl": "https://nexusprods.vercel.app/",
       "startDate": "2026-02-19",
       "endDate": "Present",
@@ -1079,31 +1079,31 @@
   "contributions": [
     {
       "repo": "codedamn-hacktoberfest-projects",
-      "contibutionDescription": "Added a complete Disney+ clone project to the Codedamn Hacktoberfest showcase.",
+      "contributionDescription": "Added a complete Disney+ clone project to the Codedamn Hacktoberfest showcase.",
       "repoOwner": "codedamn",
       "link": "https://github.com/codedamn/codedamn-hacktoberfest-projects/pull/105"
     },
     {
       "repo": "dsalgo",
-      "contibutionDescription": "Wrote and updated the contribution guide with clear onboarding steps for new contributors.",
+      "contributionDescription": "Wrote and updated the contribution guide with clear onboarding steps for new contributors.",
       "repoOwner": "manan-shxrma",
       "link": "https://github.com/manan-shxrma/dsalgo/pull/116"
     },
     {
       "repo": "dsalgo",
-      "contibutionDescription": "Improved the repository README to document project structure and usage.",
+      "contributionDescription": "Improved the repository README to document project structure and usage.",
       "repoOwner": "manan-shxrma",
       "link": "https://github.com/manan-shxrma/dsalgo/pull/52"
     },
     {
       "repo": "HacktoberFest2022",
-      "contibutionDescription": "Contributed a Binary Insertion Sort implementation to the HacktoberFest2022 collection.",
+      "contributionDescription": "Contributed a Binary Insertion Sort implementation to the HacktoberFest2022 collection.",
       "repoOwner": "theutpal01",
       "link": "https://github.com/theutpal01/HacktoberFest2022/pull/20"
     },
     {
       "repo": "GitHubGraduation-2022",
-      "contibutionDescription": "Applied to the GitHub Class of 2022 Graduate program with student profile details.",
+      "contributionDescription": "Applied to the GitHub Class of 2022 Graduate program with student profile details.",
       "repoOwner": "github-education-resources",
       "link": "https://github.com/github-education-resources/GitHubGraduation-2022/pull/1085"
     }

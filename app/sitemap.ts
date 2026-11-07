@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
 import { getLocalBlogsMeta } from "@/lib/blogs";
+import { Projects } from "@/config/projects";
+import { experiences } from "@/config/experience";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -58,6 +60,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Dynamic project detail pages
+  const projectRoutes: MetadataRoute.Sitemap = Projects.map((project) => ({
+    url: `${baseUrl}/projects/${project.id}`,
+    lastModified: new Date(project.endDate),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  // Dynamic experience detail pages
+  const experienceRoutes: MetadataRoute.Sitemap = experiences.map(
+    (experience) => ({
+      url: `${baseUrl}/experience/${experience.id}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    })
+  );
+
   // Blog post pages — local posts only (external posts live on their platform)
   const blogs = getLocalBlogsMeta();
   const blogRoutes: MetadataRoute.Sitemap = blogs.map((blog) => ({
@@ -67,5 +87,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...routes, ...blogRoutes];
+  return [...routes, ...projectRoutes, ...experienceRoutes, ...blogRoutes];
 }

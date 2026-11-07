@@ -16,7 +16,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
   });
 
   const isoDate = new Date(blog.date).toISOString();
-  const isExternal = blog.source !== "local" && Boolean(blog.externalUrl);
+  const isExternal = Boolean(blog.externalUrl);
   const href = isExternal ? blog.externalUrl! : `/blogs/${blog.slug}`;
 
   return (
@@ -35,6 +35,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
               src={blog.coverImage}
               alt={blog.title}
               fill
+              sizes="(max-width: 768px) 100vw, 768px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />

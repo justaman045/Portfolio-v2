@@ -68,7 +68,12 @@ export async function POST(req: Request) {
   }
 
   try {
-    const { name, email, message, social } = await req.json();
+    const { name, email, message, social, honeypot } = await req.json();
+
+    // Honeypot: if filled, it's a bot. Silently accept but don't submit.
+    if (honeypot) {
+      return NextResponse.json({ success: true });
+    }
 
     const delivered = await deliver(
       submitUrl,

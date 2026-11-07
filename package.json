@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -28,7 +30,7 @@
     "framer-motion": "^12.5.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.468.0",
-    "next": "^16.0.10",
+    "next": "16.4.5",
     "next-themes": "^0.4.4",
     "react": "19.2.0",
     "react-dom": "19.2.0",
@@ -43,21 +45,30 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.0.6",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.2.1",
     "autoprefixer": "^10.4.27",
     "eslint": "^9",
     "eslint-config-next": "16.0.6",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
+    "jsdom": "^31.0.0",
     "postcss": "^8.5.8",
     "prettier": "^3.4.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.23.15",
     "typescript": "^5",
-    "typescript-eslint": "^8.71.1"
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
   },
   "overrides": {
     "argparse": "^2.0.1",

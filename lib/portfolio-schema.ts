@@ -60,8 +60,20 @@ const skillSchema = z.object({
 const projectSchema = z.object({
   id: z.string(),
   companyName: z.string(),
-  type: z.string(),
-  category: z.array(z.string()),
+  type: z.enum(["Personal", "Professional"]),
+  category: z.array(
+    z.enum([
+      "Full Stack",
+      "Frontend",
+      "Backend",
+      "UI/UX",
+      "Web Dev",
+      "Mobile Dev",
+      "3D Modeling",
+      "QA / Automation",
+      "Testing",
+    ])
+  ),
   shortDescription: z.string(),
   websiteLink: z.string().optional(),
   githubLink: z.string().optional(),
@@ -99,7 +111,7 @@ const experienceSchema = z.object({
 
 const contributionSchema = z.object({
   repo: z.string(),
-  contibutionDescription: z.string(),
+  contributionDescription: z.string(),
   repoOwner: z.string(),
   link: z.string(),
 });

@@ -44,6 +44,16 @@ export default async function IndexPage() {
     sameAs: [siteConfig.links.github, siteConfig.links.twitter],
   };
 
+  // Structured data for organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: siteConfig.ogImage,
+    sameAs: [siteConfig.links.github, siteConfig.links.twitter],
+  };
+
   return (
     <ClientPageWrapper>
       <Script
@@ -51,8 +61,13 @@ export default async function IndexPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
+      <Script
+        id="schema-organization"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
 
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
+      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 min-h-[60vh] flex items-center">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
           <Image
             src={profileImg}

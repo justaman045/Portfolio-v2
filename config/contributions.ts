@@ -2,7 +2,7 @@ import { portfolio } from "./content";
 
 export interface contributionsInterface {
   repo: string;
-  contibutionDescription: string;
+  contributionDescription: string;
   repoOwner: string;
   link: string;
 }

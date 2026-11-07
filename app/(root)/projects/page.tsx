@@ -5,6 +5,8 @@ import ProjectCard from "@/components/projects/project-card";
 import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
 import { pagesConfig } from "@/config/pages";
 import { Projects } from "@/config/projects";
+import { siteConfig } from "@/config/site";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: pagesConfig.projects.metadata.title,
@@ -29,6 +31,26 @@ const renderContent = (tabVal: string) => {
 };
 
 export default function ProjectsPage() {
+  // Product/SoftwareApplication structured data for each project
+  const productSchemas = Projects.map((project) => ({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.companyName,
+    applicationCategory: project.category.join(", "),
+    description: project.shortDescription,
+    url: project.websiteLink || project.githubLink,
+    creator: {
+      "@type": "Person",
+      name: siteConfig.authorName,
+      url: siteConfig.url,
+    },
+    dateCreated: project.startDate.toISOString(),
+    ...(project.endDate
+      ? { dateModified: project.endDate.toISOString() }
+      : {}),
+    ...(project.githubLink ? { codeRepository: project.githubLink } : {}),
+  }));
+
   const tabItems = [
     {
       value: "all",
@@ -52,6 +74,11 @@ export default function ProjectsPage() {
       title={pagesConfig.projects.title}
       description={pagesConfig.projects.description}
     >
+      <Script
+        id="schema-products"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchemas) }}
+      />
       <ResponsiveTabs items={tabItems} defaultValue="all" />
     </PageContainer>
   );

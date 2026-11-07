@@ -27,6 +27,10 @@ const formSchema = z.object({
     message: "Please write something more descriptive.",
   }),
   social: z.string().url().optional().or(z.literal("")),
+  // Honeypot field — hidden from users, filled by bots. Must remain empty.
+  honeypot: z.string().max(0, {
+    message: "Invalid submission.",
+  }),
 });
 
 export function ContactForm() {
@@ -41,8 +45,11 @@ export function ContactForm() {
       email: "",
       message: "",
       social: "",
+      honeypot: "",
     },
   });
+
+  const { register } = form;
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -130,13 +137,10 @@ export function ContactForm() {
           name="social"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Social (optional)</FormLabel>
+              <FormLabel>Social profile URL (optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Link for social account" {...field} />
+                <Input placeholder="https://..." {...field} />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -147,6 +151,14 @@ export function ContactForm() {
           )}
           {form.formState.isSubmitting ? "Sending..." : "Submit"}
         </Button>
+        {/* Honeypot field — hidden from users, present for bots. */}
+        <input
+          type="text"
+          {...register("honeypot")}
+          style={{ display: "none" }}
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </form>
     </Form>
   );
