@@ -8,9 +8,10 @@ import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
+import { ReadingProgress } from "@/components/common/reading-progress";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import { getAllBlogSlugs, getBlogPost } from "@/lib/blogs";
+import { getAllBlogSlugs, getBlogPost, getRelatedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 
 interface BlogPostPageProps {
@@ -165,6 +166,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <ClientPageWrapper>
+      <ReadingProgress />
       <Script
         id="schema-blog-post"
         type="application/ld+json"
@@ -318,6 +320,59 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </footer>
         </AnimatedSection>
+
+        {/* Related posts */}
+        {(() => {
+          const related = getRelatedBlogs(slug, post.tags, 3);
+          if (related.length === 0) return null;
+          return (
+            <AnimatedSection
+              direction="up"
+              delay={0.2}
+              className="mt-16 pt-8 border-t border-border"
+            >
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-6">
+                Related posts
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {related.map((blog) => (
+                  <Link
+                    key={blog.slug}
+                    href={`/blogs/${blog.slug}`}
+                    className="group block"
+                  >
+                    <div className="p-4 bg-background border border-border rounded-lg hover:bg-accent/50 transition-colors">
+                      {blog.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          {blog.tags.slice(0, 2).map((tag) => (
+                            <span
+                              key={tag}
+                              className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-primary/10 text-primary border border-primary/20"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <h4 className="font-bold text-foreground group-hover:text-primary transition-colors">
+                        {blog.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                        {blog.description}
+                      </p>
+                      <div className="mt-4 flex items-center gap-2">
+                        <Icons.chevronRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-transform" />
+                        <span className="text-xs text-muted-foreground">
+                          Read more
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </AnimatedSection>
+          );
+        })()}
       </article>
     </ClientPageWrapper>
   );

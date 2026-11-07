@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["next", "react", "react-dom", "typescript"],
+      "groupName": "core framework",
+      "automerge": false
+    },
+    {
+      "matchPackagePatterns": ["^@next/"],
+      "groupName": "next.js ecosystem"
+    },
+    {
+      "matchPackagePatterns": ["^@types/"],
+      "groupName": "type definitions",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["eslint", "prettier", "typescript-eslint"],
+      "groupName": "linting and formatting",
+      "automerge": false
+    },
+    {
+      "matchPackageNames": ["tailwindcss", "postcss", "autoprefixer"],
+      "groupName": "styling",
+      "automerge": false
+    }
+  ],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 0,
+  "timezone": "UTC",
+  "vulnerabilityAlerts": {
+    "automerge": true,
+    "automergeType": "patch"
+  }
+}

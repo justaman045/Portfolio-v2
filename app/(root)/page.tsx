@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -11,7 +12,6 @@ import { Icons } from "@/components/common/icons";
 import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
-import SkillsCard from "@/components/skills/skills-card";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { featuredContributions } from "@/config/contributions";
 import { experiences } from "@/config/experience";
@@ -22,6 +22,10 @@ import { featuredSkills } from "@/config/skills";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+const SkillsCard = dynamic(
+  () => import("@/components/skills/skills-card").then((mod) => mod.default),
+  { loading: () => null }
+);
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -400,15 +404,47 @@ export default async function IndexPage() {
             </p>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-1 text-yellow-400">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
               </div>
               <div>
                 <p className="font-medium text-foreground">Rahul Sharma</p>
-                <p className="text-xs text-muted-foreground">QA Lead, Infosys</p>
+                <p className="text-xs text-muted-foreground">
+                  QA Lead, Infosys
+                </p>
               </div>
             </div>
           </AnimatedSection>
@@ -419,17 +455,47 @@ export default async function IndexPage() {
             className="p-6 bg-background border border-border rounded-lg"
           >
             <p className="text-muted-foreground italic mb-4">
-              &quot;The Nexus storefront is impressive &mdash; seamless checkout, instant
-              license delivery, and a clean admin portal. High-quality
-              engineering throughout.&quot;
+              &quot;The Nexus storefront is impressive &mdash; seamless
+              checkout, instant license delivery, and a clean admin portal.
+              High-quality engineering throughout.&quot;
             </p>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-1 text-yellow-400">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z" />
+                </svg>
               </div>
               <div>
                 <p className="font-medium text-foreground">Priya Patel</p>

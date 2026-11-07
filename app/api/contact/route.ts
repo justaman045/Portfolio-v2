@@ -2,6 +2,11 @@ import dns from "node:dns";
 
 import { NextResponse } from "next/server";
 
+import { validateEnv } from "@/lib/env";
+
+// Validate environment variables at load time
+validateEnv();
+
 // Some hosts advertise broken IPv6 first; prefer IPv4 so the outbound POST
 // to Google does not hang on an unreachable AAAA route.
 dns.setDefaultResultOrder("ipv4first");

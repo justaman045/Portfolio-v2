@@ -8,18 +8,24 @@ import { Analytics } from "@/components/common/analytics";
 import { ThemeProvider } from "@/components/common/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
+import { validateEnv } from "@/lib/env";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
+
+// Validate environment variables at load time
+validateEnv();
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 });
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: "../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
+  display: "swap",
 });
 
 interface RootLayoutProps {

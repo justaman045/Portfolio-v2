@@ -66,6 +66,14 @@ export function ContactForm() {
         throw new Error(`Request failed with status ${response.status}`);
       }
 
+      // GA4 conversion tracking
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "form_submit", {
+          form_name: "contact_form",
+          outcome: "success",
+        });
+      }
+
       form.reset();
       storeModal.onOpen({
         title: "Thankyou!",
@@ -75,6 +83,15 @@ export function ContactForm() {
       });
     } catch (err) {
       console.log("Err!", err);
+
+      // GA4 conversion tracking - form error
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "form_submit", {
+          form_name: "contact_form",
+          outcome: "failure",
+        });
+      }
+
       storeModal.onOpen({
         title: "Something went wrong",
         description:

@@ -88,6 +88,7 @@ export function MainNav({ items, children }: MainNavProps) {
         </nav>
       ) : null}
       <motion.button
+        aria-label="Toggle mobile menu"
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
         whileHover={{ scale: 1.05 }}

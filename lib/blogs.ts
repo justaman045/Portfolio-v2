@@ -109,7 +109,10 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
   };
 }
 
-async function safeFetch(url: string, init?: RequestInit): Promise<Response | null> {
+async function safeFetch(
+  url: string,
+  init?: RequestInit
+): Promise<Response | null> {
   try {
     const res = await fetch(url, init);
     if (!res.ok) return null;
@@ -120,7 +123,10 @@ async function safeFetch(url: string, init?: RequestInit): Promise<Response | nu
 }
 
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 async function fetchDevTo(): Promise<BlogMeta[]> {
@@ -213,15 +219,27 @@ function parseRssFeed(
   return items.map((item: any, index) => {
     const link =
       (typeof item.link === "string" ? item.link : item.link?.["@_href"]) ?? "";
-    const title = typeof item.title === "string" ? item.title : item.title?.["#text"] ?? "Untitled";
-    const date = item.pubDate ?? item.published ?? item.updated ?? new Date().toISOString();
-    const descriptionRaw = item.description ?? item.summary ?? item["content:encoded"] ?? "";
+    const title =
+      typeof item.title === "string"
+        ? item.title
+        : (item.title?.["#text"] ?? "Untitled");
+    const date =
+      item.pubDate ??
+      item.published ??
+      item.updated ??
+      new Date().toISOString();
+    const descriptionRaw =
+      item.description ?? item.summary ?? item["content:encoded"] ?? "";
     const description = stripHtml(
-      typeof descriptionRaw === "string" ? descriptionRaw : descriptionRaw?.["#text"] ?? ""
+      typeof descriptionRaw === "string"
+        ? descriptionRaw
+        : (descriptionRaw?.["#text"] ?? "")
     );
-    const tags = asArray(item.category).map((c: any) =>
-      typeof c === "string" ? c : c?.["@_term"] ?? c?.["#text"] ?? ""
-    ).filter(Boolean);
+    const tags = asArray(item.category)
+      .map((c: any) =>
+        typeof c === "string" ? c : (c?.["@_term"] ?? c?.["#text"] ?? "")
+      )
+      .filter(Boolean);
     const coverRaw =
       item.enclosure?.["@_url"] ??
       item["media:content"]?.["@_url"] ??
@@ -237,7 +255,9 @@ function parseRssFeed(
       tags,
       canonicalUrl: link,
       externalUrl: link,
-      ...(typeof coverRaw === "string" && coverRaw ? { coverImage: coverRaw } : {}),
+      ...(typeof coverRaw === "string" && coverRaw
+        ? { coverImage: coverRaw }
+        : {}),
     };
   });
 }
@@ -279,11 +299,17 @@ function normalizeKey(blog: BlogMeta): string {
       .replace(/^https?:\/\//, "")
       .replace(/\/+$/, "");
   }
-  return blog.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  return blog.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
 function normalizeTitleKey(title: string): string {
-  return title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
 /**
@@ -348,13 +374,39 @@ export async function getFeaturedBlogs(): Promise<BlogMeta[]> {
   const configured = portfolio.blog.featured;
   if (configured.length > 0) {
     const featured = all.filter((blog) =>
-      configured.some(
-        (key) => key === blog.canonicalUrl || key === blog.title
-      )
+      configured.some((key) => key === blog.canonicalUrl || key === blog.title)
     );
     if (featured.length > 0) return featured.slice(0, 3);
   }
   const localFeatured = all.filter((b) => b.featured);
   if (localFeatured.length > 0) return localFeatured.slice(0, 3);
   return all.slice(0, 3);
+}
+
+/**
+ * Returns related blog posts based on shared tags, excluding the current post.
+ * Sorted by number of shared tags (desc), then by date (desc).
+ */
+export function getRelatedBlogs(
+  currentSlug: string,
+  currentTags: string[],
+  limit: number = 3
+): BlogMeta[] {
+  const all = getLocalBlogsMeta();
+
+  return all
+    .filter((blog) => blog.slug !== currentSlug)
+    .map((blog) => {
+      const sharedTags = blog.tags.filter((tag) => currentTags.includes(tag));
+      return { blog, sharedTagCount: sharedTags.length };
+    })
+    .filter((item) => item.sharedTagCount > 0)
+    .sort((a, b) => {
+      if (b.sharedTagCount !== a.sharedTagCount) {
+        return b.sharedTagCount - a.sharedTagCount;
+      }
+      return new Date(b.blog.date).getTime() - new Date(a.blog.date).getTime();
+    })
+    .slice(0, limit)
+    .map((item) => item.blog);
 }
