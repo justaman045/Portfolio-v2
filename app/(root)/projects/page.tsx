@@ -51,6 +51,26 @@ export default function ProjectsPage() {
     ...(project.githubLink ? { codeRepository: project.githubLink } : {}),
   }));
 
+  // BreadcrumbList for projects page
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Projects",
+        item: `${siteConfig.url}/projects`,
+      },
+    ],
+  };
+
   const tabItems = [
     {
       value: "all",
@@ -78,6 +98,11 @@ export default function ProjectsPage() {
         id="schema-products"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchemas) }}
+      />
+      <Script
+        id="schema-breadcrumb-projects"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <ResponsiveTabs items={tabItems} defaultValue="all" />
     </PageContainer>

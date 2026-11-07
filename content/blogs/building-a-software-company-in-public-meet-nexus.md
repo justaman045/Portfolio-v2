@@ -60,6 +60,6 @@ Keeping the catalogue in Firestore is what makes the whole thing sustainable: I 
 
 The company is live and selling. Over the coming months I'll keep shipping quality products, writing about the journey, and sharing the wins and the failures.
 
-If you want to see what I'm selling right now, the current catalogue is live — check it out at **https://nexusprods.vercel.app/**.
+If you want to see what I'm selling right now, the current catalogue is live — check it out at **[Nexus Storefront](/projects/nexus)** or **[nexusprods.vercel.app/](https://nexusprods.vercel.app/)**.
 
 Building in public means being accountable in public. This is Nexus — I hope you'll follow along.

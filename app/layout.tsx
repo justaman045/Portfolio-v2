@@ -130,6 +130,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Toaster />
           <ModalProvider />
         </ThemeProvider>
+        {/* Preconnect / DNS-prefetch for external domains */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://opengraph.githubassets.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://cdn.hashnode.com" />
+        <link rel="dns-prefetch" href="https://miro.medium.com" />
+        <link rel="dns-prefetch" href="https://nexusprods.vercel.app" />
+        <link rel="dns-prefetch" href="https://avatars.githubusercontent.com" />
       </body>
       <GoogleAnalytics gaId={GA_ID} />
     </html>

@@ -36,6 +36,8 @@ export default function BlogCard({ blog }: BlogCardProps) {
               alt={blog.title}
               fill
               sizes="(max-width: 768px) 100vw, 768px"
+              decoding="async"
+              loading="lazy"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />

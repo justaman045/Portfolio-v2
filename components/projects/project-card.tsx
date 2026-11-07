@@ -19,6 +19,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           src={project.companyLogoImg}
           alt={project.companyName}
           fill
+          decoding="async"
+          loading="lazy"
         />
       </div>
       <div className="pt-5 space-y-3 flex flex-col flex-grow">

@@ -119,66 +119,66 @@
   },
   "pages": {
     "home": {
-      "title": "Home",
+      "title": "Home — Senior SDET & Test Automation Engineer",
       "description": "AI-enabled Senior SDET specializing in scalable test automation, API validation, and quality engineering for enterprise systems, and founder of Nexus, a software company that ships quality products.",
       "metadata": {
-        "title": "Home",
+        "title": "Home — Senior SDET | Test Automation Engineer | Aman Ojha",
         "description": "Aman Ojha — AI-enabled Senior SDET with {yearsOfExperience}+ years of experience in test automation and quality engineering, currently building Nexus — a software company that ships quality products."
       }
     },
     "skills": {
-      "title": "Skills",
+      "title": "Skills — Test Automation & QA Engineering",
       "description": "Core skills across test automation, API testing, AI-augmented QA, and full-stack development.",
       "metadata": {
-        "title": "Skills",
+        "title": "Skills — Test Automation, API Testing, QA Engineering | Aman Ojha",
         "description": "Aman Ojha's key skills in test automation, API testing, quality engineering, and AI."
       }
     },
     "projects": {
-      "title": "Projects",
+      "title": "Projects — Software Development & Test Automation",
       "description": "Showcasing impactful projects and technical achievements — including Nexus, the software company I'm building.",
       "metadata": {
-        "title": "Projects",
+        "title": "Projects — Software Development & Test Automation | Aman Ojha",
         "description": "Aman Ojha's projects across test automation, AI, and full-stack development — including Nexus, the software company he's building."
       }
     },
     "contact": {
-      "title": "Contact",
+      "title": "Contact — Hire a Senior SDET",
       "description": "Let's connect and explore collaborations.",
       "metadata": {
-        "title": "Contact",
+        "title": "Contact — Hire Senior SDET | Test Automation Engineer | Aman Ojha",
         "description": "Contact Aman Ojha."
       }
     },
     "contributions": {
-      "title": "Contributions",
+      "title": "Contributions — Open Source",
       "description": "Open-source contributions and community involvement.",
       "metadata": {
-        "title": "Contributions",
+        "title": "Contributions — Open Source | Aman Ojha",
         "description": "Aman Ojha's open-source contributions and community involvement."
       }
     },
     "resume": {
-      "title": "Resume",
+      "title": "Resume — Senior SDET",
       "description": "Aman Ojha's resume.",
       "metadata": {
-        "title": "Resume",
+        "title": "Resume — Senior SDET | Aman Ojha",
         "description": "Aman Ojha's resume."
       }
     },
     "blogs": {
-      "title": "Blogs",
+      "title": "Blogs — Test Automation & Software Engineering",
       "description": "Thoughts on AI, software engineering, and building in public.",
       "metadata": {
-        "title": "Blogs",
+        "title": "Blogs — Test Automation & Software Engineering | Aman Ojha",
         "description": "Aman Ojha's blog — thoughts on AI, software engineering, and building in public."
       }
     },
     "experience": {
-      "title": "Experience",
+      "title": "Experience — Senior SDET Career Timeline",
       "description": "Professional journey and career timeline — from enterprise QA engineering to founding the software company Nexus.",
       "metadata": {
-        "title": "Experience",
+        "title": "Experience — Senior SDET Career | Aman Ojha",
         "description": "Aman Ojha's professional journey as an AI-enabled Senior Software Development Engineer in Test and founder of the software company Nexus."
       }
     }

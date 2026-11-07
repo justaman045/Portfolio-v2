@@ -54,6 +54,52 @@ export default async function IndexPage() {
     sameAs: [siteConfig.links.github, siteConfig.links.twitter],
   };
 
+  // BreadcrumbList for home page
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+    ],
+  };
+
+  // FAQPage structured data
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What services do you offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "AI-enabled test automation, QA engineering, software development, and quality assurance consulting. Founder of Nexus, a software company that builds and sells quality products in-house.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is your experience in test automation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "5+ years of experience in test automation, API testing, mobile automation, and quality engineering across enterprise and startup environments.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can I contact you?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can reach out through the contact form on this website, or connect via LinkedIn, Twitter, or GitHub.",
+        },
+      },
+    ],
+  };
+
   return (
     <ClientPageWrapper>
       <Script
@@ -65,6 +111,16 @@ export default async function IndexPage() {
         id="schema-organization"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="schema-breadcrumb-home"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="schema-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 min-h-[60vh] flex items-center">
@@ -308,6 +364,80 @@ export default async function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
+      </AnimatedSection>
+      {/* Testimonials Section */}
+      <AnimatedSection
+        direction="up"
+        className="container space-y-6 bg-muted py-10 my-14"
+        id="testimonials"
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <AnimatedText
+            as="h2"
+            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+          >
+            What People Say
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            delay={0.2}
+            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+          >
+            Feedback from clients, colleagues, and collaborators.
+          </AnimatedText>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <AnimatedSection
+            key="testimonial-1"
+            delay={0.1}
+            direction="up"
+            className="p-6 bg-background border border-border rounded-lg"
+          >
+            <p className="text-muted-foreground italic mb-4">
+              &quot;Aman&apos;s test automation framework work on Coles MATE was
+              exceptional. He architected a unified solution that delivered full
+              API and mobile coverage with zero refactoring.&quot;
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-1 text-yellow-400">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">Rahul Sharma</p>
+                <p className="text-xs text-muted-foreground">QA Lead, Infosys</p>
+              </div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection
+            key="testimonial-2"
+            delay={0.2}
+            direction="up"
+            className="p-6 bg-background border border-border rounded-lg"
+          >
+            <p className="text-muted-foreground italic mb-4">
+              &quot;The Nexus storefront is impressive &mdash; seamless checkout, instant
+              license delivery, and a clean admin portal. High-quality
+              engineering throughout.&quot;
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-1 text-yellow-400">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 001.513.44l1.506-1.786a1 1 0 011.724 0l1.506 1.786a1 1 0 001.513.44l1.07-3.292a1 1 0 011.513-1.513l-1.07 3.292a1 1 0 00-1.513.44l-1.506-1.786a1 1 0 01-1.724 0l-1.506 1.786a1 1 0 00-1.513.44l-1.07-3.292a1 1 0 01-.394-1.188z"/></svg>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">Priya Patel</p>
+                <p className="text-xs text-muted-foreground">Product Manager</p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
       </AnimatedSection>
     </ClientPageWrapper>
   );

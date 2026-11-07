@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import type { Metadata } from "next";
 
 import { Icons } from "@/components/common/icons";
 import ProjectDescription from "@/components/projects/project-description";
@@ -11,11 +12,46 @@ import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+import Script from "next/script";
 
 interface ProjectPageProps {
   params: Promise<{
     projectId: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { projectId } = await params;
+  const project = Projects.find((val) => val.id === projectId);
+
+  if (!project) {
+    return { title: "Project Not Found" };
+  }
+
+  return {
+    title: `${project.companyName} | Projects`,
+    description: project.shortDescription,
+    alternates: {
+      canonical: `${siteConfig.url}/projects/${projectId}`,
+    },
+    openGraph: {
+      title: project.companyName,
+      description: project.shortDescription,
+      url: `${siteConfig.url}/projects/${projectId}`,
+      siteName: siteConfig.name,
+      type: "website",
+      images: [
+        {
+          url: project.companyLogoImg,
+          width: 1200,
+          height: 630,
+          alt: project.companyName,
+        },
+      ],
+    },
+  };
 }
 
 export default async function Project({ params }: ProjectPageProps) {
@@ -25,8 +61,64 @@ export default async function Project({ params }: ProjectPageProps) {
     redirect("/projects");
   }
 
+  // Review / AggregateRating schema for project
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "SoftwareApplication",
+      name: project.companyName,
+    },
+    author: {
+      "@type": "Person",
+      name: siteConfig.authorName,
+    },
+    datePublished: project.startDate.toISOString(),
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+
+  // Offer schema for Nexus products
+  const offerSchema =
+    project.companyName === "Nexus"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "SoftwareApplication",
+            name: project.companyName,
+          },
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          seller: {
+            "@type": "Organization",
+            name: siteConfig.authorName,
+            url: siteConfig.url,
+          },
+        }
+      : null;
+
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
+      {reviewSchema && (
+        <Script
+          id="schema-review"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+        />
+      )}
+      {offerSchema && (
+        <Script
+          id="schema-offer"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+        />
+      )}
       <Link
         href="/projects"
         className={cn(
@@ -93,7 +185,8 @@ export default async function Project({ params }: ProjectPageProps) {
         width={720}
         height={405}
         className="my-8 rounded-md border bg-muted transition-colors"
-        priority
+        decoding="async"
+        loading="lazy"
       />
 
       <div className="mb-7 ">

@@ -49,6 +49,26 @@ export default function ExperiencePage() {
     description: exp.description.join(" "),
   }));
 
+  // BreadcrumbList for experience page
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Experience",
+        item: `${siteConfig.url}/experience`,
+      },
+    ],
+  };
+
   return (
     <PageContainer
       title={pagesConfig.experience.title}
@@ -58,6 +78,11 @@ export default function ExperiencePage() {
         id="schema-job-postings"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostings) }}
+      />
+      <Script
+        id="schema-breadcrumb-experience"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Timeline experiences={experiences} />
     </PageContainer>
